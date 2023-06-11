@@ -3,10 +3,23 @@
 }
 
 body{
-	font-family: Arial;
+	font-family: 'Glagolitsa', sans-serif;
 }
 
 select.display-mini{
 	font-size: 1.2em;
 	width: 100%;
+}
+
+#contenedor {
+  margin-left:0px;
+  margin-right:0px; 
+}
+
+#contenedor img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  padding: 0px;
+  margin:0 0px;
 }

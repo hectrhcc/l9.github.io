@@ -39,7 +39,7 @@ article {
 	background-color: #000;
 	padding-left: 0; /*0 20px*/
 	margin: auto; /* establece los márgenes superior e inferior a 0 y los laterales a automático */
-    max-width: 650px; /* establece el ancho máximo del artículo */	
+  max-width: 650px; /* establece el ancho máximo del artículo */	
 }
 img:hover {
   filter: grayscale(50%) brightness(30%) hue-rotate(60deg);

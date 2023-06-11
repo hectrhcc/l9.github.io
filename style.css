@@ -72,7 +72,7 @@ img {
 	cursor:pointer;
 }
 .contenedor{
-	widht: 90%;
+	width: 90%;
 	max-width: 1200px;
 	overflow: hidden;
 	margin: 0 auto;
@@ -169,7 +169,7 @@ p{
    width: 100%;
    background-color: #111;
    color: white;
-   padding: 2rem;
+   padding: 2.6rem;
 }
 
 .correo {

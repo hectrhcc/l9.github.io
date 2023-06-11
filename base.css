@@ -1,0 +1,30 @@
+.display-great{
+	display: none;
+}
+
+.display-medium{
+	display: none;
+}
+
+.display-mini{
+	display: none;
+}
+
+.menu{
+	/*text-align: justify;*/
+	text-align: center;
+	width: 100%;
+	height: 18px;
+	padding: 0 0; /*0 20px*/
+	margin:0 0; /*0 10px*/
+	/*padding-left:0;*/ 
+	padding: 0px;
+}
+
+.menu li{
+	text-decoration: none;
+	display: inline;
+	list-style-type: none;
+	margin-right: 15px;
+	padding-right: 10px;
+}

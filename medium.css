@@ -5,3 +5,17 @@
 body{
 	font-family: 'Glagolitsa', sans-serif;
 }
+
+
+.correo {
+   display: inline-block;
+   float: left;
+}
+
+
+.cop {
+   display: inline-block;
+   text-align: right;
+   float: right;
+   font-family: 'alagard.ttf', sans-serif;
+}

@@ -10,25 +10,19 @@
 	<link rel="stylesheet" type="text/css" href="great.css" media="screen and (min-width:1081px)"/>
 	<link rel="stylesheet" type="text/css" href="medium.css" media="screen and (min-width:581px) and (max-width:1080px)"/>
 	<link rel="stylesheet" type="text/css" href="mini.css" media="screen and (max-width:580px)"/>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <title>Los Nueve Talentos</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="index.js"></script>
 </head>
 <body>
-
-<audio controls loop class="oculto" id="audio">
-  <source src="l9t.ogg" type="audio/ogg">
-  <source src="l9t.mp3" type="audio/mpeg">
-  <!--Tu navegador no soporta el elemento de audio.-->
-</audio>
-
 <header>
 	<h1 class="display-great"></h1>
 	<h1 class="display-medium"></h1>
 	<h1 class="display-mini"></h1>
 </header>
-
-<div id="wrapper">
+<!--<div id="wrapper">-->
 <section id="main-section">
     <ul class="menu display-great display-medium display-mini">
 		<li><a href="info.html" target="_blank">Info</a></li>
@@ -46,22 +40,36 @@
         <img src="simbolow.jpg" alt="Imagen simbolo 4">
         <img src="x.jpg">
      </div>
-      <img id="contenedor" src="simbolo1.jpg" alt="Imagen simbolo 1" width="120px" height="100px">
-      <img id="contenedor" src="simbolo2.jpg" alt="Imagen simbolo 2" width="120px" height="100px">
-      <img id="contenedor" src="simbolo3.jpg" alt="Imagen simbolo 3" width="120px" height="100px">
-      <img id="contenedor" src="simbolo4.jpg" class="imagen-final" alt="Imagen simbolo 4" width="120px" height="100px">    
+      <img id="contenedor" src="simbolo1.jpg" alt="Imagen simbolo 1" width="120px" height="100px" class="imagen-final1">
+      <img id="contenedor" src="simbolo2.jpg" alt="Imagen simbolo 2" width="120px" height="100px" class="imagen-final2">
+      <img id="contenedor" src="simbolo3.jpg" alt="Imagen simbolo 3" width="120px" height="100px" class="imagen-final3">
+      <img id="contenedor" src="simbolo4.jpg" alt="Imagen simbolo 4" width="120px" height="100px" class="imagen-final4">    
      </section>
           <!-- &#268;itatelja koji &#382;eli upoznati temelje hrvatskog crkvenoslavenskog
 jezika, upu&#263;ujemo na&nbsp;priloge prof.dr. Vladimira &#262;epuli&#263;a,
 objavljene u &#269;asopisu Ba&#353;&#263;ina<span class="destacado">Los Nueve Talentos</span> 
 Dru&#353;tva prijatelja glagoljice.<br><br>
 <img id="foto" style="width: 380px; height:180px;" alt="x" src="missal-1483ocenas.jpg">
-      <img id="foto" style="width: 380px; height:180px;" alt="x" src="juraj_iz_roca1482.jpg">-->
-</div>
-<footer class="pie">
-	<a  class="correo" href="
-	mailto:hcontrerascorvacho@gmail.com">contacto</a>
-	<p class="cop">Araki System 2023</p>
-	</footer>
+      <img id="foto" style="width: 380px; height:180px;" alt="x" src="juraj_iz_roca1482.jpg">-
+  </div>-->
+
+<footer class="pie"> 
+  <contenedor class="footer-content">
+<div class="contact-us">
+      <h4 class="as">Araki System</h4>
+    </div>
+    <div class="social-media">
+      <a href="https://www.facebook.com/Los_Nueve_Talentos/" class="social-media-icon">
+        <i class='bx bxl-facebook-circle'></i>
+      </a>
+      <a href="https://www.twitter.com/Los_Nueve_Talentos/" class="social-media-icon">
+        <i class='bx bxl-twitter'></i>
+      </a>
+      <a href="https://www.instagram.com/Los_Nueve_Talentos/" class="social-media-icon">
+        <i class='bx bxl-instagram'></i>
+      </a>
+    </div>
+  </contenedor>
+</footer>
 </body>
 </html>

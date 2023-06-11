@@ -38,9 +38,56 @@ select.display-mini{
    font-family: 'alagard.ttf', sans-serif;
 }
 
-@media screen and (max-width: 357px), screen and (max-height: 667px) {
-  .imagen-final {
-    display: none;
+@media screen and (max-width: 126px) {
+  .imagen-final4, .imagen-final3, .imagen-final2, .imagen-final1 {
+    display: flex; /*se muestran en fila*/
   }
 }
 
+@media screen and (min-width: 127px) and (max-height: 667px) {
+  .imagen-final4, .imagen-final3 {
+    display: none;
+  }
+  .imagen-final1, .imagen-final2{
+    display: inline-flex; /* se muestran una al lado de otra*/
+  }
+}
+
+
+@media screen and (min-width:368px) and (max-height: 667px) {
+  .imagen-final4,  {
+    display: none;
+  }
+  .imagen-final1, .imagen-final2,.imagen-final3{
+    display: inline-flex; /* se muestran una al lado de otra*/
+  }
+}
+
+@media screen and (min-width:494px) and (max-height: 667px) {    
+  .imagen-final1, .imagen-final2,.imagen-final3,.imagen-final4{
+    display: inline-flex; /* se muestran una al lado de otra*/
+  }
+}
+
+
+/*
+@media (min-width: 201px) {
+  estilos CSS aquí 
+}
+*/
+/*
+estilos para pantallas con una anchura menor o igual a 150px 
+@media (max-width: 150px) {
+ estilos CSS aquí 
+}
+
+ estilos para pantallas con una anchura mayor que 150px y menor o igual a 200px 
+@media (min-width: 151px) and (max-width: 200px) {
+   estilos CSS aquí 
+}
+
+ estilos para pantallas con una anchura mayor que 200px 
+@media (min-width: 201px) {
+  estilos CSS aquí 
+}
+*/

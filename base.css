@@ -14,11 +14,12 @@
 	/*text-align: justify;*/
 	text-align: center;
 	width: 100%;
-	height: 18px;
+	height: 17px;
 	padding: 0 0; /*0 20px*/
 	margin:0 0; /*0 10px*/
 	/*padding-left:0;*/ 
-	padding: 0px;
+	padding-top:30px;/*Menu  ver la altura*/
+	padding-bottom:20px;
 }
 
 .menu li{

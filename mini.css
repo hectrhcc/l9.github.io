@@ -23,3 +23,10 @@ select.display-mini{
   padding: 0px;
   margin:0 0px;
 }
+
+
+@media screen and (max-width: 357px), screen and (max-height: 667px) {
+  .imagen-final {
+    display: none;
+  }
+}

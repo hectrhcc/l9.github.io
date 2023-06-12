@@ -104,6 +104,12 @@ a {
   text-decoration: none;
 }
 
+.correo {
+   display: inline-block;
+   font-family: 'alagard.ttf', sans-serif;
+   float: left;
+}
+
 #carrusel {
    position: relative;
    width: 100%;

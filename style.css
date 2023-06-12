@@ -44,15 +44,6 @@ img:hover {
   filter: grayscale(50%) brightness(30%) hue-rotate(60deg);
 }
 
-img {
-  display: inline-grid;
-  margin-left: 0px ;
-  margin-right: 0px;
-  margin-bottom: 0px;
-  cursor: not-allowed;
-  padding-left: 0px;
-}
-
 #foto{
    display: block;
    margin: auto;
@@ -80,6 +71,17 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  
+}
+
+
+img {
+  display: inline-grid;
+ margin-left: 0px ;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  cursor: not-allowed;
+  padding-left: 0px;
 }
 
 
@@ -125,19 +127,33 @@ a {
    opacity: 1;
 }
 
+
 #contenedor {
   justify-content: center;
+  text-align: center;
   align-items: center;
-  margin-left:50px;
-  margin-right:20px; 
+  width:auto;
+  /*margin-left: 50px;
+  margin-right: 20px; esto estaba dandole espacio en medio*/
 }
 
-#contenedor img {
+/*#contenedor img {
   display: inline-block;
   max-width: 100%;
   height: auto;
   padding: 0px;
-  margin:0 10px;
+  margin: 0;
+}*/
+
+#contenedor-imagenes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contenedor-imagenes img {
+  margin: 0;
+  max-width: 100%;
 }
 
 .destacado {

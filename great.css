@@ -13,12 +13,12 @@ header, footer, #wrapper{
 }
 
 
-#main-section{
+#main-section{/*este era el ctm*/
 	margin-top: 0px;
-	margin-left: 21%;
+	margin: 0 auto;
 	margin-bottom: 0px;
-	width: 60%;
-	height: 10%;
+	width: 50%;
+	height: 600px;
 	max-width: 1200px;
 	
 }

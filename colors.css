@@ -1,4 +1,5 @@
 body{
+	background-color: black;
 	color:#fff;
 }
 
@@ -22,15 +23,7 @@ a:active{
 }
 
 
-header{
-	background-color: #000;
-}
-
-nav{
-	background-color:#000;
-}
-
 section{
 	background-color: #000;
-	margin-bottom: 2rem; /* establece un margen inferior de 3rem */
+	margin-bottom:0px; /* establece un margen inferior de 3rem */
 }

@@ -40,7 +40,7 @@ select.display-mini{
 
 
 @media screen and (max-width: 126px) {
-  .imagen-final4, .imagen-final3, .imagen-final2, .imagen-final1 {
+  .imagen-final4, .imagen-final3, .imagen-final2, .imagen-final1,a.correo {
     display: none; /*se muestran en fila verticual*/
   }
 }

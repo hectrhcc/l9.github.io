@@ -9,7 +9,6 @@
 }
 
 body{
-	background-color: #000;
 	color:#fff;
 	font-family: 'Glagolitsa', sans-serif;
 }
@@ -139,9 +138,10 @@ a {
   text-align: center;
   align-items: center;
   width:auto;
+}
   /*margin-left: 50px;
   margin-right: 20px; esto estaba dandole espacio en medio*/
-}
+
 
 /*#contenedor img {
   display: inline-block;
@@ -254,3 +254,6 @@ p{
   padding-left:4.8px;
 }
 
+html {
+  background: #000 !important;
+}

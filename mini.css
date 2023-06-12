@@ -40,7 +40,7 @@ select.display-mini{
 
 
 @media screen and (max-width: 126px) {
-  .imagen-final4, .imagen-final3, .imagen-final2,.social-media,.social-media-icon {
+  .imagen-final4, .imagen-final3, .imagen-final2{
     display: none; /*se muestran en fila verticual*/
   }
 }
@@ -53,6 +53,12 @@ select.display-mini{
     display: inline-flex; /* se muestran una al lado de otra*/
   }
 }
+
+
+@media screen and (max-width: 262px) {
+  .social-media,.social-media-icon{
+    display: none; /*se muestran en fila verticual*/
+  }
 
 
 @media screen and (min-width:368px) and (max-height: 667px) {

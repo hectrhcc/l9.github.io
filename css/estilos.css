@@ -263,6 +263,10 @@ a:active{
 		margin-bottom:40px ;
 	}
 
+	h4, a,.correo{
+		display: none;
+	}
+
 }
 
 @media screen and (max-width: 500px){
@@ -286,5 +290,9 @@ a:active{
 	}
 	.contact-us{
 		width: 90%;
+	}
+	
+	h4, a,.correo{
+		display: none;
 	}
 } 

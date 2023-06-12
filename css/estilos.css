@@ -114,7 +114,7 @@ h1,h2,h3,h4,h5,h6 {
 a{
 	text-decoration: none;
 	color:red;
-	font-family: 'Glagolitsa', sans-serif;
+	
 }
 
 /*Tienen que tener este orden particular*/
@@ -177,7 +177,7 @@ a:active{
    width: 100%; /*ancho del footer*/
    background-color: #111;
    color: white;
-   padding: 1.79rem;
+   padding: 1.2rem;
    float: left;
 }
 
@@ -197,6 +197,33 @@ a:active{
   align-items: center; /* alinear verticalmente */
 }
 
+
+.social-media{
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social-media-icon{
+  display: inline-block;
+  margin-left: 17px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #fff;
+  border-radius:51%;
+  text-align: center;
+  color:#fff;
+}
+
+.social-media-icon:hover{
+  background:#fff;
+  color: #000; 
+}
+
+.social-media-icon i{
+  font-size: 28px;
+  line-height: 40px;
+}
 
 
 

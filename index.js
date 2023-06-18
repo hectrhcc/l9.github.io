@@ -1,7 +1,7 @@
 $(document).ready(function() {
    var imagenes = $('#carrusel img');
    var indiceActual = 0;
-   var intervalo = setInterval(cambiarImagen, 3000);
+   var intervalo = setInterval(cambiarImagen, 2500);
 
    function cambiarImagen() {
       imagenes.eq(indiceActual).removeClass('active');

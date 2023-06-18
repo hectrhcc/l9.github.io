@@ -307,3 +307,64 @@ p{
   background:#e51a4c;
   color: #000; 
 }
+
+
+
+@media screen and (max-width: 800px){
+	.titulo{
+		font-size: 40px;
+		font-family: 'Glagolitsa', sans-serif;
+
+	}	
+	.agregar-imagen{
+		width: 80%;
+
+	}
+
+	.img-galeria{
+		width: 45%;
+
+	}
+	.footer-content{
+		justify-content: center;
+	}
+	.social-media{
+		width: 80%;
+		justify-content: space-evenly;
+	}
+	.social-media-icon{
+		margin-left: 0;
+	}
+
+	.social-media i{
+		margin-left: 0;
+
+	}
+	.contact-us{
+		text-align: center;
+		width: 80%;
+		margin-bottom:40px ;
+	}
+	h4{
+		display: none;
+	} 
+
+/*	h4, a{
+		display: none;
+	} esto era lo que no me dejaba ver el contenido de descargas*/
+	.seccion{
+	display: flex; /*centrar seccion de descargas*/
+	height: 100%; 
+	/*align-items: center;
+	position: 600px;*/
+	justify-content:center;
+	margin:0 auto;
+	width:328px; 
+}
+
+
+.H{
+	overflow: scroll;	
+}
+
+}

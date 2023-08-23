@@ -51,6 +51,11 @@ h1,h4 {
    src: url('alagard.ttf') format('truetype');
 }
 
+.x{
+	height: 28px;
+	width: 26px;
+	margin-top:5px;
+}
 
 .contenedor{
 	width: 100%;
@@ -127,6 +132,7 @@ h1,h4 {
  en esos .2 segundos va a aparecer show = parte negra con transparencia
 */
 
+
 a{
 	text-decoration: none;
 	color:#e51a4c;
@@ -134,6 +140,8 @@ a{
 }
 
 /*Tienen que tener este orden particular*/
+
+
 
 a:link {
 	color: white;
@@ -145,12 +153,14 @@ a:visited{
 
 a:hover{
 	transition: color 0.3s ease;
-	color:#e51a4c;
+	color: #e51a4c;
+	
 }
 
 a:active{
 	color: white;
 }
+
 
 
 .agregar-imagen{/*  agregar-imagen con showImage , cuando le de clic a una imagen 
@@ -266,7 +276,7 @@ p{
 	text-align: center;
 }
 .downloads{
-	float: center;
+	float:center;
     display:inline-block;
     text-align: center;
     justify-content: center;
@@ -279,6 +289,17 @@ p{
     border-radius: 5px;
     cursor: pointer;
     color: #fff;
+}
+
+.inactivo{ /*no es necesario .downlaods .inactivo*/
+	background-color: #111;
+	cursor: not-allowed;
+	
+}
+
+.inactivo a{
+	color:#222;
+	cursor: not-allowed;
 }
 
 .icono{
@@ -294,6 +315,19 @@ p{
   	align-items: center;
 }
 
+.iconoinactivo{
+	margin: 13px;
+	display: inline-block;
+	box-shadow: 0 0 6px rgba(0,0,0,0.5);
+	width: 43px;
+	float: center;
+  	height: 43px;
+  	border-radius:61%;
+  	text-align: center;
+  	align-items: center;
+	cursor: not-allowed;
+}
+
 .icon{
 	display: flex; /*centrar*/
 	margin:0 auto; /*centrar*/
@@ -303,11 +337,20 @@ p{
 
 }
 
-#sistemas-operativos-link:hover{
+#windows-link:hover{
   background:#e51a4c;
   color: #000; 
 }
 
+/*#linux-link:hover{
+	background:#e51a4c;
+	color: #000; 
+  }
+
+#mac-link:hover{
+	background:#e51a4c;
+	color: #000; 
+  }*/
 
 
 @media screen and (max-width: 800px){
@@ -352,7 +395,7 @@ p{
 /*	h4, a{
 		display: none;
 	} esto era lo que no me dejaba ver el contenido de descargas*/
-	.seccion{
+.seccion{
 	display: flex; /*centrar seccion de descargas*/
 	height: 100%; 
 	/*align-items: center;

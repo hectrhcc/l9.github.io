@@ -228,4 +228,36 @@ section{
       
     }
   }
+
+  @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+    /* Estilos para el iPhone 11 */
+    /* Agrega aquí tus reglas de estilo específicas para el iPhone 11 */
+    .cuadrito {
+      left:-260px;
+      width: 120px;
+    }
+    .menu li{
+      text-decoration: none;
+      display: inline;
+      list-style-type: none;
+      
+      position: relative;
+      top:60px;
+      left:-70px;
+      padding-right:0;
+      text-align: center;
+      font-size: 8px;
+      font-family: 'Glagolitsa';;
+    }
+
+    .container{
+      display: flex;  
+      position: absolute;
+      left:40px;
+      top: 240px;
+      
+      
+    }
+
+  }
   

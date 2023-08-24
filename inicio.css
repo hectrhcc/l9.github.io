@@ -404,11 +404,5 @@ con el solapamiento de resoluciones*/
         width: 120px;
         border: 1px solid white;
       }
-      .contenedor2{
-        display:inline;
-        position: relative;
-        left: 120px;
-        float: right;
-        width: 60%;
-    }
+    
   }

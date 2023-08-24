@@ -244,7 +244,7 @@ section{
       
       position: relative;
       top:60px;
-      left:0px;
+      left:200px;
       padding-right:0;
       text-align: center;
       font-size: 8px;
@@ -255,7 +255,7 @@ section{
       display: flex;  
       position: absolute;
       float:left;
-      left:70px;
+      left:80px;
       top: 240px;
       
       

@@ -242,11 +242,11 @@ section{
       list-style-type: none;
       position: relative;
       top:60px;
-      left:-300px;
+      left:-400px;
       width:100%;
       padding-right:0;
       text-align: center;
-      font-size: 12px;
+      font-size: 14px;
       font-family: 'Glagolitsa';;
     }
 

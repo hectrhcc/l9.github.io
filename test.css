@@ -258,6 +258,13 @@ section{
       
       
     }
+    body {
+      padding: 100px;
+      background-color: black !important;
+      margin: 0 auto;
+      margin-right:0;
+      overflow: hidden; 
+    }
 
   }
   

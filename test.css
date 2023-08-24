@@ -229,8 +229,8 @@ section{
     }
   }
 
-  @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
-    /* Estilos para el iPhone 11 */
+  @media only screen and (device-width: 828px) and (device-height: 1792px) and (-webkit-device-pixel-ratio: 2) {
+  
     /* Agrega aquí tus reglas de estilo específicas para el iPhone 11 */
     .cuadrito {
       left:-260px;

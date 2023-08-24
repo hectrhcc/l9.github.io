@@ -242,10 +242,15 @@ section{
       position:relative;
       top:60px;
       margin-left:-200px;
-      padding-left:10px;
+     
       text-align: center;
       font-size: 14px;
       font-family: 'Glagolitsa';;
+    }
+
+    li{
+      padding-left:10px;
+      padding-right:10px;
     }
 
     .container{

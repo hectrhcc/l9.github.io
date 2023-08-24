@@ -102,3 +102,13 @@ document.addEventListener("DOMContentLoaded", function() {
     })(i);
   }
 });
+
+var images = document.getElementsByTagName('img');
+var sampleText = document.getElementById('sample-text');
+for (var i = 0; i < images.length; i++) {
+  images[i].addEventListener("mouseover", updateName)
+}
+
+function updateName() {
+  sampleText.innerHTML = this.getAttribute('data-text');
+}

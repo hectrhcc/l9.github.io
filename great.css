@@ -7,24 +7,6 @@ h1,h2{
 }
 
 
-header, footer, #wrapper{
-	width: 100%;
-	max-width: 1500px;
-}
-
-
-#main-section{/*este era el ctm*/
-	margin-top: 0px;
-	margin: 0 auto;
-	margin-bottom: 0px;
-	width: 50%;
-	height: 600px;
-	max-width: 1200px;
-	
-}
-
 @media screen and (min-width: 1081px) and (max-height: 667px) {
-  .imagen-final1, .imagen-final2,.imagen-final3,.imagen-final4{
-    display: inline-flex; /* se muestran una al lado de otra*/
-  }
+
 }

@@ -328,17 +328,20 @@ br {
     }
 }
 #otherScene{
-    margin: 0 auto;
+    
     text-align: center;
 }
 .cuadrito{
+    display: block;
+    position:relative;
     background-color:#000;
     color: #fff;
     border: 2px solid #333;
     text-align: center;
     padding: 5px;
     width:13%;
-    margin-left:500px;
+    margin-left:490px;
+    
 }
 a{
     text-decoration: none;
@@ -349,3 +352,49 @@ color: #fff;
 text-align: center;
 
 }
+/*una resolucion pequeña no deberia influir en una grande, hay que estar ojo
+con el solapamiento de resoluciones*/
+
+/* Media query para una resolución de pantalla de 390x844 */
+@media (min-width: 390px) and (max-width: 844px) {
+    .cuadrito {
+      left: -420px;
+      width: 70px;
+    }
+
+    .contenedor2{
+        display:inline;
+        position: relative;
+        left: 110px;
+        float: right;
+        width: 60%;
+    }
+
+
+
+  }
+  
+  /* Media query para una resolución de pantalla de 768x2014 */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .cuadrito {
+      left:-260px;
+      width: 120px;
+    }
+
+    .contenedor2{
+        display:inline;
+        position: relative;
+        left: 320px;
+        float: right;
+        width: 60%;
+    }
+  }
+  
+  /* Media query para una resolución de pantalla de 1440x900 */
+  @media (min-width: 1440px) and (max-width: 900px) {
+    .cuadrito {
+      left: 792px;
+      width: 120px;
+      background-color: beige;
+    }
+  }

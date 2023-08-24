@@ -243,6 +243,7 @@ section{
       position: relative;
       top:60px;
       left:-350px;
+      width:100%;
       padding-right:0;
       text-align: center;
       font-size: 8px;

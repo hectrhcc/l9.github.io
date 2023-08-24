@@ -229,9 +229,9 @@ section{
     }
   }
 
-  @media only screen and (device-width: 828px) and (device-height: 1792px) and (-webkit-device-pixel-ratio: 2) {
+  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    /* CSS */  
   
-    /* Agrega aquí tus reglas de estilo específicas para el iPhone 11 */
     .cuadrito {
       left:0px;
       width: 120px;
@@ -259,13 +259,7 @@ section{
       
       
     }
-    body {
-      
-      background-color: black !important;
-      margin: 0 auto;
-      margin-right:0;
-      overflow: hidden; 
-    }
+  
 
   }
   

@@ -236,10 +236,6 @@ section{
       border: 1px solid white;
       width: 120px;
     }
-    .menu {
-      display:inline;
-      justify-content: space-evenly;
-    }
     .menu li {
       text-decoration: none;
       display: inline;
@@ -247,7 +243,9 @@ section{
       position: relative;
       top: 60px; 
       left:-14px;
+      justify-content: space-evenly;
       margin-left: -195px;
+      width:50%;
       text-align: center;
       font-size: 14px;
       font-family: 'Glagolitsa';

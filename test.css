@@ -237,12 +237,12 @@ section{
       width: 120px;
     }
     .menu {
-      display: flex;
+      display:inline;
       justify-content: space-evenly;
     }
     .menu li {
       text-decoration: none;
-      display: inline;
+      display: flex;
       list-style-type: none;
       position: relative;
       top: 60px; 

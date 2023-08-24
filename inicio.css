@@ -405,10 +405,5 @@ con el solapamiento de resoluciones*/
         border: 1px solid white;
       }
 
-      .contenedor2{
-        display:inline;
-        position: relative;
-        left: 0px;
-    }
-    
+     
   }

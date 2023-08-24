@@ -242,7 +242,7 @@ section{
       list-style-type: none;
       position:absolute;
       top:60px;
-      left:-350px;
+      left:0px;
       width:100%;
       padding-right:0;
       text-align: center;

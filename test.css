@@ -247,7 +247,8 @@ section{
     }
 
    ul li{
-    margin-left:200px;
+    margin: 0 auto;
+    float: left;
     }
 
     .container{

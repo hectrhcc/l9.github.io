@@ -112,10 +112,90 @@ a {
 
 #carrusel {
    position: relative;
-   width: 100%;
-   height:270px;
+   margin-top:70px;
+   width: 100px;
+   height:170px;
    overflow: hidden;
    margin-bottom: 0px;
+   perspective: 1000px; /* Se agrega una perspectiva para el efecto 3D */
+}
+
+.image-holder {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /*animation: rotate linear 5s infinite forwards;*/
+  animation-name: rotate;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.image-holder:hover {
+  animation-play-state: paused;
+}
+
+.image-holder img {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.image-holder img:nth-child(1) {
+  top: -15px;
+  left: -15px;
+}
+
+.image-holder img:nth-child(3) {
+  top: -15px;
+  right: -15px;
+}
+
+.image-holder img:nth-child(5) {
+  bottom: -15px;
+  right: -15px;
+}
+
+.image-holder img:nth-child(7) {
+  bottom: -15px;
+  left: -15px;
+}
+
+.image-holder img:nth-child(2) {
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.image-holder img:nth-child(4) {
+  top: 50%;
+  right: -50px;
+  transform: translateY(-50%);
+}
+
+.image-holder img:nth-child(6) {
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.image-holder img:nth-child(8) {
+  top: 50%;
+  left: -50px;
+  transform: translateY(-50%);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 #carrusel img {
@@ -124,7 +204,8 @@ a {
    bottom: 0; 	
    left: 0;
    width: 100%;
-   height:360px;
+   height:100%;
+   object-fit: cover;
    opacity: 0;
    transition: opacity 1s ease-in-out;
 }
@@ -134,30 +215,38 @@ a {
 }
 
 
+#carrusel img.active {
+  opacity: 1;
+}
+
 #contenedor {
   justify-content: center;
   text-align: center;
   align-items: center;
   width:auto;
 }
-  /*margin-left: 50px;
-  margin-right: 20px; esto estaba dandole espacio en medio*/
 
 
-/*#contenedor img {
-  display: inline-block;
-  max-width: 100%;
-  height: auto;
-  padding: 0px;
-  margin: 0;
-}*/
 
-#contenedor-imagenes {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /*margin-top:26.5px; para celulares muy chicos*/
+#carrusel {
+  position: relative;
+  margin-top: 70px;
+  width: 100%;
+  height: 270px;
+  overflow: hidden;
+  margin-bottom: 0px;
+  perspective: 1000px; /* Se agrega una perspectiva para el efecto 3D */
 }
+
+@keyframes rotate {
+  0% {
+      transform: rotateY(0deg); /* Inicia la rotación en 0 grados */
+  }
+  100% {
+      transform: rotateY(360deg); /* Termina la rotación en 360 grados */
+  }
+}
+
 
 #contenedor-imagenes img {
   margin: 0px;
@@ -253,10 +342,4 @@ p{
 
 html {
   background: #000 !important;
-}
-
-.x{
- height: 28px;
- width: 26px;
- margin-top:5px;
 }

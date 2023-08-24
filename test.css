@@ -230,7 +230,10 @@ section{
 
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     /* CSS */  
-  
+  html,body{
+    padding: 0;
+    margin: 0;
+  }
     .cuadrito {
       left:100px;
       border: 1px solid white;

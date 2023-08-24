@@ -242,10 +242,10 @@ section{
       list-style-type: none;
       position: relative;
       top: 60px; 
-      left:-14px;
+      left:20px;
       justify-content: space-evenly;
-      margin-left: -195px;
-      width:50%;
+      margin-left:-200px;
+      width:100%;
       text-align: center;
       font-size: 14px;
       font-family: 'Glagolitsa';

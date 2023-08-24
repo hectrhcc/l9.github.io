@@ -253,6 +253,7 @@ section{
     .container{
       display: flex;  
       position: absolute;
+      float:left;
       left:40px;
       top: 240px;
       

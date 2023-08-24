@@ -233,7 +233,7 @@ section{
   
     /* Agrega aquí tus reglas de estilo específicas para el iPhone 11 */
     .cuadrito {
-      left:-260px;
+      left:0px;
       width: 120px;
     }
     .menu li{
@@ -243,7 +243,7 @@ section{
       
       position: relative;
       top:60px;
-      left:-70px;
+      left:0px;
       padding-right:0;
       text-align: center;
       font-size: 8px;
@@ -254,13 +254,13 @@ section{
       display: flex;  
       position: absolute;
       float:left;
-      left:40px;
+      left:0px;
       top: 240px;
       
       
     }
     body {
-      padding: 100px;
+      
       background-color: black !important;
       margin: 0 auto;
       margin-right:0;

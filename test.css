@@ -238,7 +238,7 @@ section{
     }
     .menu li{
       text-decoration: none;
-      display: inline;
+      display: block;
       list-style-type: none;
       position:relative;
       top:60px;

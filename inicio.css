@@ -436,7 +436,7 @@ con el solapamiento de resoluciones*/
     .contenedor4{
         display:inline;
         position:flex;
-        width:80%;
+        width:100%;
     }
 
   }

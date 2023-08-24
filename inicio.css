@@ -408,6 +408,7 @@ con el solapamiento de resoluciones*/
       .contenedor2{
         display:inline;
         position: absolute;
+        left:200px;
         
      
     }

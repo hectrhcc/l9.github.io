@@ -240,11 +240,10 @@ section{
       text-decoration: none;
       display: inline;
       list-style-type: none;
-      position:absolute;
+      position:relative;
       top:60px;
-      left:0px;
+      left:40px;
       width:100%;
-      padding-right:0;
       text-align: center;
       font-size: 14px;
       font-family: 'Glagolitsa';;

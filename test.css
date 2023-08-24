@@ -246,8 +246,8 @@ section{
       list-style-type: none;
       position: relative;
       top: 60px; 
-      left:-140px;
-      margin-left: -100px;
+      /*left:-140px;*/
+      margin-left: -200px;
       text-align: center;
       font-size: 14px;
       font-family: 'Glagolitsa';

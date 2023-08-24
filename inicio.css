@@ -435,12 +435,9 @@ con el solapamiento de resoluciones*/
 
     .contenedor4{
         display:block;
-        position:absolute;
+        position:flex;
         width:100%;
     }
-    .contenedor5{
-        display:block;
-        position:absolute;
-    }
+    
 
   }

@@ -244,8 +244,8 @@ section{
       display: inline;
       list-style-type: none;
       position: relative;
-      top: 60px; 
-      left:20px;
+      top:120px; 
+      left:0px;
       justify-content: space-evenly;
       
       width:100%;

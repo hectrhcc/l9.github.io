@@ -240,9 +240,9 @@ section{
       text-decoration: none;
       display: inline;
       list-style-type: none;
-      position: relative;
+      position:static;
       top:60px;
-      left:-400px;
+      left:-350px;
       width:100%;
       padding-right:0;
       text-align: center;

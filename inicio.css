@@ -434,10 +434,10 @@ con el solapamiento de resoluciones*/
     }
 
     .contenedor4{
-        display:block;
+        display:inline;
         position:flex;
         width:100%;
-        font-size: 3px;
+        font-size:2px;
     }
     
 

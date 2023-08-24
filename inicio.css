@@ -182,13 +182,14 @@ text-align: center;
   
   .dot {
     display: inline-block;
-    width: 10px;
-    height: 10px;
-    font-weight: bold;
+    width:7px;
+    height:7px;
+    
     background-color: #000;
     border-radius: 50%;
     opacity: 0;
-    animation: blink 1.5s infinite;
+    animation: blink 0.4s infinite;
+    margin-right:0.1px;
   }
   
   .dot:nth-child(2) {

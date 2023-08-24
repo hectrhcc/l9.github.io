@@ -412,4 +412,7 @@ con el solapamiento de resoluciones*/
         float: right;
         width: 50%;
     }
+    body{
+        width: 100%;
+    }
   }

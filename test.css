@@ -225,7 +225,6 @@ section{
       left: 260px;
       top: 240px;
       
-      
     }
   }
 
@@ -241,10 +240,9 @@ section{
       text-decoration: none;
       display: inline;
       list-style-type: none;
-      
       position: relative;
       top:60px;
-      left:200px;
+      left:-200px;
       padding-right:0;
       text-align: center;
       font-size: 8px;
@@ -255,7 +253,7 @@ section{
       display: flex;  
       position: absolute;
       float:left;
-      left:80px;
+      left:84px;
       top: 240px;
       
       

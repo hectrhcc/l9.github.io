@@ -406,9 +406,10 @@ con el solapamiento de resoluciones*/
       }
    
       .contenedor2{
-     
-       
-        width: 60%;
+        display:inline;
+        position: relative;
+        left: 320px;
+        float: right;
     }
 
   }

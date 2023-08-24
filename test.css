@@ -242,7 +242,7 @@ section{
       list-style-type: none;
       position:relative;
       top:60px;
-      left:-500px;
+      right: 40px;
       text-align: center;
       font-size: 14px;
       font-family: 'Glagolitsa';;

@@ -209,8 +209,13 @@ text-align: center;
     }
   }
 
+
+
+  
 /*una resolucion pequeña no deberia influir en una grande, hay que estar ojo
 con el solapamiento de resoluciones*/
+
+
 
 /* Media query para una resolución de pantalla de 390x844 */
 @media (min-width: 390px) and (max-width: 844px) {
@@ -302,3 +307,65 @@ con el solapamiento de resoluciones*/
     }
 
   }
+
+
+  .blinking-cursor {
+    background-color: #fff;
+    width: 0.8em;
+    height: 0.15em;
+    -webkit-animation: 0.65s blink-182 step-end infinite;
+    -moz-animation: 0.65s blink-182 step-end infinite;
+    -ms-animation: 0.65s blink-182 step-end infinite;
+    -o-animation: 0.65s blink-182 step-end infinite;
+    animation: 0.65s blink-182 step-end infinite;
+}
+
+@keyframes blink-182 {
+    from,
+    to {
+        background-color: transparent;
+    }
+    50% {
+        background-color: white;
+    }
+}
+
+@-moz-keyframes blink-182 {
+    from,
+    to {
+        background-color: transparent;
+    }
+    50% {
+        background-color: white;
+    }
+}
+
+@-webkit-keyframes blink-182 {
+    from,
+    to {
+        background-color: transparent;
+    }
+    50% {
+        background-color: white;
+    }
+}
+
+@-ms-keyframes blink-182 {
+    from,
+    to {
+        background-color: transparent;
+    }
+    50% {
+        background-color: white;
+    }
+}
+
+@-o-keyframes blink-182 {
+    from,
+    to {
+        background-color: transparent;
+    }
+    50% {
+        background-color: white;
+    }
+}

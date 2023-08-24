@@ -439,6 +439,9 @@ con el solapamiento de resoluciones*/
         width:100%;
         font-size:2px;
     }
-    
+    html body{
+        margin: 0;
+        padding: 0;
+    }
 
   }

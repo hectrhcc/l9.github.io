@@ -238,11 +238,10 @@ section{
     }
     .menu li{
       text-decoration: none;
-      display: block;
       list-style-type: none;
       position:relative;
       top:60px;
-      margin-left:-100px;
+      margin-left:-500px;
       text-align: center;
       font-size: 14px;
       font-family: 'Glagolitsa';;

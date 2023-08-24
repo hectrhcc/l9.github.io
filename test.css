@@ -244,10 +244,10 @@ section{
       display: inline;
       list-style-type: none;
       position: relative;
-      top:160px; 
-      left:0px;
+      top:190px; 
+      left:100px;
       justify-content: space-evenly;
-      margin-left:-200px;
+      
       width:100%;
       text-align: center;
       font-size: 14px;

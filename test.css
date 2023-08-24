@@ -240,7 +240,7 @@ section{
       text-decoration: none;
       display: inline;
       list-style-type: none;
-      position:static;
+      position:absolute;
       top:60px;
       left:-350px;
       width:100%;

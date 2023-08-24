@@ -434,9 +434,13 @@ con el solapamiento de resoluciones*/
     }
 
     .contenedor4{
-        display:inline;
-        position:flex;
+        display:block;
+        position:absolute;
         width:100%;
+    }
+    .contenedor5{
+        display:block;
+        position:absolute;
     }
 
   }

@@ -395,6 +395,13 @@ con el solapamiento de resoluciones*/
     .cuadrito {
       left: 792px;
       width: 120px;
-      background-color: beige;
     }
+  }
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    .cuadrito {
+        left: 792px;
+        width: 120px;
+        border: 1px solid white;
+      }
   }

@@ -399,18 +399,38 @@ con el solapamiento de resoluciones*/
   }
 
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
-    .cuadrito {
-        left: 792px;
-        width: 120px;
-        border: 1px solid white;
-      }
-   
       .contenedor2{
         display:inline;
         position:absolute;
         left:170px;
         width:60%;
      
+    }
+
+    #otherScene{
+    
+        text-align: center;
+    }
+    .cuadrito{
+        display: block;
+        position:relative;
+        background-color:#000;
+        color: #fff;
+        border: 2px solid #333;
+        text-align: center;
+        padding: 5px;
+        width:13%;
+        margin-left:0px;
+        
+    }
+    a{
+        text-decoration: none;
+    }
+    .cuadrito:hover{
+    background-color: #e51a4c;
+    color: #fff;
+    text-align: center;
+    
     }
 
   }

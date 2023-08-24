@@ -420,7 +420,7 @@ con el solapamiento de resoluciones*/
         text-align: center;
         padding:10px;
         width:70%;
-        margin-left:50px;
+        margin-left:40px;
         
     }
     a{
@@ -431,6 +431,14 @@ con el solapamiento de resoluciones*/
     color: #fff;
     text-align: center;
     
+    }
+
+    .contenedor4{
+        display:inline;
+        position:absolute;
+        left:170px;
+        width:80%;
+     
     }
 
   }

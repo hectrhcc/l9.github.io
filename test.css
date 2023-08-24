@@ -233,7 +233,8 @@ section{
     /* CSS */  
   
     .cuadrito {
-      left:0px;
+      left:100px;
+      border: 1px solid white;
       width: 120px;
     }
     .menu li{
@@ -243,7 +244,7 @@ section{
       
       position: relative;
       top:60px;
-      left:-100px;
+      left:0px;
       padding-right:0;
       text-align: center;
       font-size: 8px;
@@ -254,7 +255,7 @@ section{
       display: flex;  
       position: absolute;
       float:left;
-      left:40px;
+      left:70px;
       top: 240px;
       
       

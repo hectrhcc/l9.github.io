@@ -407,9 +407,8 @@ con el solapamiento de resoluciones*/
       .contenedor2{
         display:inline;
         position: relative;
-        left: 240px;
+        left: 320px;
         float: right;
-        width: 50%;
+        width: 60%;
     }
-     
   }

@@ -240,17 +240,14 @@ section{
       text-decoration: none;
       list-style-type: none;
       position:relative;
-      top:60px;
-      margin-left:-200px;
-     
+      top:60px; 
       text-align: center;
       font-size: 14px;
       font-family: 'Glagolitsa';;
     }
 
-    li{
-      padding-left:10px;
-      padding-right:10px;
+   ul li{
+    margin-left:200px;
     }
 
     .container{

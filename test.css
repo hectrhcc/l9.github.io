@@ -244,16 +244,16 @@ section{
       display: inline;
       list-style-type: none;
       position: relative;
-      top:120px; 
+      top:160px; 
       left:0px;
       justify-content: space-evenly;
-      
+      margin-left:-200px;
       width:100%;
       text-align: center;
       font-size: 14px;
       font-family: 'Glagolitsa';
-      padding-left: -10px; /* Agrega un espacio de 10px a la izquierda del texto */
-      padding-right: -10px; /* Agrega un espacio de 10px a la derecha del texto */
+      padding-left:10px; /* Agrega un espacio de 10px a la izquierda del texto */
+     /* Agrega un espacio de 10px a la derecha del texto */
     }
   }
 

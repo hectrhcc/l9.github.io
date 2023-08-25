@@ -178,7 +178,7 @@ section{
     margin: 0;
   }
   .cuadrito {
-    left:100px;
+    left:300px;
       border: 1px solid white;
       width: 120px;
   }
@@ -198,7 +198,7 @@ section{
   .container{
     display: flex;  
     position: absolute;
-    left:50px;
+    left:70px;
     top: 100px;
     
   }

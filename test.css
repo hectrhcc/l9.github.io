@@ -188,7 +188,7 @@ section{
     list-style-type: none;
     position: relative;
     top:70px;
-    left:-350px;
+    left:-330px;
     padding-right:0;
     text-align: center;
     font-size: 18px;
@@ -198,7 +198,7 @@ section{
   .container{
     display: flex;  
     position: absolute;
-    left:30px;
+    left:50px;
     top: 100px;
     
   }

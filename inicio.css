@@ -217,8 +217,8 @@ con el solapamiento de resoluciones*/
 
 
 
-/* Media query para una resolución de pantalla de 390x844 */
-@media (min-width: 200px) and (max-width: 844px) {
+/* Media query para una resolución de pantalla de xx844 */
+@media (min-width: 200px) and (max-width: 639px) {
     .cuadrito {
       left: -420px;
       width: 70px;

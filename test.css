@@ -177,11 +177,7 @@ section{
     padding: 0;
     margin: 0;
   }
-  .cuadrito {
-    left:auto;
-      border: 1px solid white;
-      width: 100%;
-  }
+  
   .menu li{
     text-decoration: none;
     display: inline;

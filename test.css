@@ -172,7 +172,39 @@ section{
 }
 
 
+@media (min-width:360px) and (max-width: 640px) {
+  html,body{
+    padding: 0;
+    margin: 0;
+  }
+  .cuadrito {
+    left:-260px;
+    width: 120px;
+  }
+  .menu li{
+    text-decoration: none;
+    display: inline;
+    list-style-type: none;
+    position: relative;
+    top:70px;
+    left:-380px;
+    padding-right:0;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Glagolitsa';;
+  }
+
+  .container{
+    display: flex;  
+    position: absolute;
+    left:10px;
+    top: 100px;
+    
+  }
+}
+
 @media (min-width:390px) and (max-width:840px){
+  
   .container{
     display: flex;  
     position: absolute;

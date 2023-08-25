@@ -180,7 +180,7 @@ section{
   .cuadrito {
     left:auto;
       border: 1px solid white;
-      width: 120px;
+      width: 100%;
   }
   .menu li{
     text-decoration: none;

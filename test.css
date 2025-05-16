@@ -6,6 +6,7 @@ body {
     overflow: hidden; 
   }
   
+
   .parent {
     position: relative;
   }
@@ -106,23 +107,24 @@ body {
   .container{
     display: flex;
     position: absolute;
-    left: 500px;
-    top: 150px;
-    
+    left: 42%;
+    top: 30%;
+    margin: 0 auto;
+   
   }
 
   .menu{
     /*text-align: justify;*/
-    position: relative;
-    left:344px;
-    top: -60px;
+    text-align: center;    
     width: 100%;
     height: 17px;
     padding: 0 0; /*0 20px*/
-    margin:0 0; /*0 10px*/
+    margin:0 auto; /*0 10px*/
     /*padding-left:0;*/ 
     padding-top:5px;/*Menu  ver la altura*/
-    padding-bottom:22px;
+    padding-bottom:2.2rem;
+     position:relative;
+     bottom:3rem;
   }
   
   .menu li{

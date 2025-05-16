@@ -206,9 +206,9 @@ section{
   
   .container{
     display: flex;  
-    position: absolute;
-    left: 100px;
-    top: 240px;
+    position: relative;
+    left: 40%;
+    bottom: 50%;
     
     
   }
@@ -217,9 +217,9 @@ section{
     text-decoration: none;
     display: inline;
     list-style-type: none;
-    margin-left: -160px;
     position: relative;
-    top:60px;
+    bottom:50%;
+    left:15%;
     padding-right:0;
     text-align: center;
     font-size: 8px;
@@ -242,7 +242,7 @@ section{
       list-style-type: none;
       margin-left: -160px;
       position: relative;
-      top:60px;
+      top:50%;
       left:150px;
       padding-right:0;
       text-align: center;
@@ -253,8 +253,8 @@ section{
     .container{
       display: flex;  
       position: absolute;
-      left: 260px;
-      top: 240px;
+      left: 45%;
+      top: 20%;
       
     }
   }

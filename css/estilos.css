@@ -15,36 +15,13 @@ body{
 	/*overflow: hidden; oculta la barra*/
 }
 
-.H{
-	overflow: hidden;	
-}
-
-h3,h5,h6 {   
-	text-align: center;
-	font-family:'VCR_OSD_MONO.ttf', sans-serif;
-}
 
 
-h2{
-	color:white;
-	font-family:'VCR_OSD_MONO.ttf', sans-serif;
-}
-
-h1,h4 {
-	color:#e51a4c;
-	font-family:'VCR_OSD_MONO.ttf', sans-serif;
-}
 
 @font-face {
    font-family: 'Glagolitsa';
    src: url('Glagolitsa.ttf') format('truetype');
 }
-
-@font-face {
-   font-family: 'VCR_OSD_MONO';
-   src: url('VCR_OSD_MONO.ttf') format('truetype');
-}
-
 
 @font-face {
    font-family: 'alagard';
@@ -55,9 +32,9 @@ h1,h4 {
 .contenedor{
 	width: 100%;
 	max-width: 1200px;
-	overflow: hidden;
-	margin: 15px;
-	padding:30px;
+	overflow:block;
+	margin: 0 auto;
+	padding:2rem;
 	height: 162vh;
 }
 
@@ -90,6 +67,7 @@ h1,h4 {
 
 .gallery{
 	background: #000;
+	
 }
 
 .contenedor-galeria{
@@ -107,6 +85,7 @@ h1,h4 {
 	margin-bottom: 15px;
 	box-shadow: 0 0 6px rgba(0,0,0,.5);
 	cursor:pointer;
+	border:1px solid white;
 }
 
 .imagen-light{ /*  imagen-light con show , cuando le de clic a una imagen 
@@ -183,73 +162,6 @@ a:active{
 	transform: translate(0);/* se anima translate */
 }
 
-/* Footer */
-
-
-.pie {
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%; /*ancho del footer*/
-   background-color: #111;
-   color: white;
-   padding: 1.2rem;
-   float: left;
-}
-
-.footer-content{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-wrap: wrap;
-	padding-top: auto;
-	padding-bottom: auto;
-}
-
-.contact-us{
-  width: 50%; /* ajustar el ancho según el espacio restante */
-  color: #fff;
-  display: flex;
-  align-items: center; /* alinear verticalmente */
-}
-
-
-.social-media{
-  width: 50%;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.social-media-icon{
-  display: inline-block;
-  margin-left: 17px;
-  width: 40px;
-  height: 40px;
-  border: 1px solid #fff;
-  border-radius:51%;
-  text-align: center;
-  color:#fff;
-}
-
-.social-media-icon:hover{
-  background:#e51a4c;
-  color: #000; 
-}
-
-.social-media-icon i{
-  font-size: 28px;
-  line-height: 40px;
-}
-
-p{
-	color:white;
-	justify-content: center;
-	float: center;
-}
-
-.principal{
-	height: 105vh; /*centrar*/
-}
 
 .seccion{
 	display: flex; /*centrar seccion de descargas*/
@@ -261,120 +173,10 @@ p{
 	width:428px; 
 }
 
-.descargas{
-	display: inline-block;
-	text-align: center;
+@font-face {
+  font-family: 'Glagolitsa';
+  src: url('../Glagolitsa.ttf') format('truetype');
 }
-.downloads{
-	float: center;
-    display:inline-block;
-    text-align: center;
-    justify-content: center;
-    background-color: #222;
-    width: 127px;
-    height: 127px;
-    margin: 5px;
-    padding: 10px 10px 5px 5px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    color: #fff;
-}
-
-.icono{
-	margin: 13px;
-	display: inline-block;
-	box-shadow: 0 0 6px rgba(0,0,0,0.5);
-	width: 43px;
-	float: center;
-  	height: 43px;
-  	border: 1px solid #fff;
-  	border-radius:61%;
-  	text-align: center;
-  	align-items: center;
-}
-
-.icon{
-	display: flex; /*centrar*/
-	margin:0 auto; /*centrar*/
-	float:center; /*centrar*/
-	width:228px; 
-	cursor:not-allowed;
-
-}
-
-#sistemas-operativos-link:hover{
-  background:#e51a4c;
-  color: #000; 
-}
-
-
-p{
-	color:white;
-	justify-content: center;
-	float: center;
-}
-
-.principal{
-	height: 105vh; /*centrar*/
-}
-
-.seccion{
-	display: flex; /*centrar seccion de descargas*/
-	height: 100%; 
-	/*align-items: center;
-	position: 600px;*/
-	justify-content:center;
-	margin:0 auto;
-	width:428px; 
-}
-
-.descargas{
-	display: inline-block;
-	float: center;
-}
-.downloads{
-	float: center;
-    display:inline-block;
-    text-align: center;
-    justify-content: center;
-    background-color: #222;
-    width: 127px;
-    height: 127px;
-    margin: 5px;
-    padding: 10px 10px 5px 5px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    color: #fff;
-}
-
-.icono{
-	margin: 13px;
-	display: inline-block;
-	box-shadow: 0 0 6px rgba(0,0,0,0.5);
-	width: 43px;
-	float: center;
-  	height: 43px;
-  	border: 1px solid #fff;
-  	border-radius:61%;
-  	text-align: center;
-  	align-items: center;
-}
-
-.icon{
-	display: flex; /*centrar*/
-	margin:0 auto; /*centrar*/
-	float:center; /*centrar*/
-	width:228px; 
-	cursor:not-allowed;
-}
-
-#sistemas-operativos-link:hover{
-  background:#e51a4c;
-  color: #000; 
-}
-
 
 @media screen and (max-width: 800px){
 	.titulo{
@@ -432,7 +234,7 @@ p{
 
 	.subtitulo{
 		font-size: 30px;
-		font-family: 'Glagolitsa', sans-serif;
+		font-family: 'Glagolitsa';
 	}
 	.img-galeria{
 		width: 95%;

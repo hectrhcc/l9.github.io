@@ -17,7 +17,7 @@ body {
        /* mobile friendly font size */
        font-size: 1.1rem;
     margin:40px;
-    margin-top:1rem;
+    
 }
 
 /*es interesante como se logro acomodar esto
@@ -26,7 +26,9 @@ prueba dandole flex a los inline  y valores al float*/
 .contenedor0{
     display:flex;
     width:50%;
-    margin-top:5px;
+    position: relative;
+    top:1rem;
+    border:1px solid red;
     margin-bottom:55px;
 }
 .contenedor1{

@@ -242,6 +242,10 @@ con el solapamiento de resoluciones*/
     .oculto-cel{
         display: none;
     }
+    
+.entrar {
+    font-size: 0.9rem;
+}
 
   }
   

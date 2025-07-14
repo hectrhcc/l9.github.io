@@ -102,6 +102,7 @@ color: lime;
 }
 .cuadrito {
     position: relative;
+    bottom:0.7rem;
     background-color: #000;
     color: #fff;
     border: 2px solid #fff;

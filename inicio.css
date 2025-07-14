@@ -234,13 +234,14 @@ con el solapamiento de resoluciones*/
     .contenedor2{
         display:inline;
         position: relative;
-        left: 110px;
+        left: 130px;
         float: right;
         width: 70%;
-        border:2px solid red;
     }
 
-
+    .oculto-cel{
+        display: none;
+    }
 
   }
   
@@ -253,20 +254,9 @@ con el solapamiento de resoluciones*/
         left: 320px;
         float: right;
         width: 60%;
-        border:2px solid red;
+
     }
 
-     .contenedor3{
-        border:2px solid red;
-     }
-
-      .contenedor4{
-        border:2px solid blue;
-      }
-
-       .contenedor5{
-        border:2px solid green;
-       }
   }
   
   /* Media query para una resolución de pantalla de 1440x900 */

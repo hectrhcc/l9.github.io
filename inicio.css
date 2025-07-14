@@ -88,13 +88,15 @@ color: lime;
 }
 
 .entrar {
-    font-size: 2rem;
-  
+    font-size: 1.2rem;
     color: #fff;
+    text-align:left;
 }
 
 #otherScene{
     display:flex;
+    position: relative;
+    top:-3rem;
     text-align: center;
     margin: 0 auto;
 }
@@ -107,7 +109,7 @@ color: lime;
     padding: 5px;
     justify-content: center;  
     width: 6rem;
-    margin: 2rem auto;
+    margin: 1.5rem auto;
 }
 a{
     text-decoration: none;

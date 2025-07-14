@@ -87,64 +87,10 @@ color: lime;
     width: 26.5px;
 }
 
-@media only screen and (max-width: 768px) {
-    .interface-wrapper {
-        width: 100%;
-        top: 24px;
-        left: 24px;
-    }
-
-    .icon-control-container {
-        height: 19.5px;
-        width: 19.5px;
-    }
-}
-
-
-
-/* if on mobile */
-@media only screen and (max-width: 768px) {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    p {
-        font-size: 10px;
-    }
-}
-
-/* if on mobile make all loading screen elements have a padding of 16 */
-@media only screen and (max-width: 768px) {
-    .loading-screen-header {
-        padding: 16px;
-    }
-
-    .info-wrapper {
-        top: 16px;
-        left: 16px;
-    }
-
-    .blinking-cursor {
-        background-color: #fff;
-        width: 0.4em;
-        height: 0.08em;
-        -webkit-animation: 0.65s blink step-end infinite;
-        -moz-animation: 0.65s blink step-end infinite;
-        -ms-animation: 0.65s blink step-end infinite;
-        -o-animation: 0.65s blink step-end infinite;
-        animation: 0.65s blink step-end infinite;
-    }
-    
-    .loading-screen-body {
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-
-    .loading-screen-footer {
-        padding: 16px;
-        padding-bottom: 32px;
-    }
+.entrar {
+    font-size: 2rem;
+  
+    color: #fff;
 }
 
 #otherScene{
@@ -214,6 +160,67 @@ text-align: center;
 
 
   
+
+@media only screen and (max-width: 768px) {
+    .interface-wrapper {
+        width: 100%;
+        top: 24px;
+        left: 24px;
+    }
+
+    .icon-control-container {
+        height: 19.5px;
+        width: 19.5px;
+    }
+}
+
+
+
+/* if on mobile */
+@media only screen and (max-width: 768px) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p {
+        font-size: 10px;
+    }
+}
+
+/* if on mobile make all loading screen elements have a padding of 16 */
+@media only screen and (max-width: 768px) {
+    .loading-screen-header {
+        padding: 16px;
+    }
+
+    .info-wrapper {
+        top: 16px;
+        left: 16px;
+    }
+
+    .blinking-cursor {
+        background-color: #fff;
+        width: 0.4em;
+        height: 0.08em;
+        -webkit-animation: 0.65s blink step-end infinite;
+        -moz-animation: 0.65s blink step-end infinite;
+        -ms-animation: 0.65s blink step-end infinite;
+        -o-animation: 0.65s blink step-end infinite;
+        animation: 0.65s blink step-end infinite;
+    }
+    
+    .loading-screen-body {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .loading-screen-footer {
+        padding: 16px;
+        padding-bottom: 32px;
+    }
+}
+
 /*una resolucion pequeña no deberia influir en una grande, hay que estar ojo
 con el solapamiento de resoluciones*/
 
@@ -227,7 +234,8 @@ con el solapamiento de resoluciones*/
         position: relative;
         left: 110px;
         float: right;
-        width: 60%;
+        width: 70%;
+        border:2px solid red;
     }
 
 
@@ -243,7 +251,20 @@ con el solapamiento de resoluciones*/
         left: 320px;
         float: right;
         width: 60%;
+        border:2px solid red;
     }
+
+     .contenedor3{
+        border:2px solid red;
+     }
+
+      .contenedor4{
+        border:2px solid blue;
+      }
+
+       .contenedor5{
+        border:2px solid green;
+       }
   }
   
   /* Media query para una resolución de pantalla de 1440x900 */

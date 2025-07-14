@@ -258,6 +258,13 @@ con el solapamiento de resoluciones*/
         bottom:4rem;
         
 }
+
+
+.warning{
+ display:none
+}
+
+
   }
   
   /* Media query para una resolución de pantalla de 768x2014 */

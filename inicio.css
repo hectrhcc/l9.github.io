@@ -25,7 +25,7 @@ prueba dandole flex a los inline  y valores al float*/
 .contenedor0{
     display:flex;
     width:50%;
-    margin-top:5px;
+    margin-top:0.3rem;
     margin-bottom:55px;
 }
 .contenedor1{

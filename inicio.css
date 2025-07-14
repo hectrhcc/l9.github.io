@@ -246,7 +246,11 @@ con el solapamiento de resoluciones*/
 .entrar {
     font-size: 0.9rem;
 }
-
+#otherScene{
+        position: relative;
+        bottom:4rem;
+        
+}
   }
   
   /* Media query para una resolución de pantalla de 768x2014 */
@@ -276,8 +280,7 @@ con el solapamiento de resoluciones*/
     }
 
     #otherScene{
-        position: relative;
-        top: -1rem;
+        
         text-align: center;
     }
     a{

@@ -122,6 +122,13 @@ text-align: center;
 
 }
 
+.warning{
+    text-align: left;
+    justify-content: left;
+    max-width: 53%;
+    font-size: 1.2rem;
+}
+
 .loading {
     position: relative;
   }

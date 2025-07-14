@@ -146,25 +146,26 @@ color: lime;
         padding-bottom: 32px;
     }
 }
+
 #otherScene{
-    
+    display:flex;
     text-align: center;
+    margin: 0 auto;
 }
-.cuadrito{
-    display: block;
-    position:relative;
-    background-color:#000;
+.cuadrito {
+    position: relative;
+    background-color: #000;
     color: #fff;
     border: 2px solid #fff;
     text-align: center;
     padding: 5px;
-    width: 10%;
-    justify-content: center;
+    justify-content: center;  
+    width: 5rem;
     margin: 2rem auto;
 }
-
 a{
     text-decoration: none;
+    color: #fff;
 }
 .cuadrito:hover{
 background-color: #e51a4c;
@@ -220,11 +221,7 @@ con el solapamiento de resoluciones*/
 
 /* Media query para una resolución de pantalla de xx844 */
 @media (min-width: 200px) and (max-width: 639px) {
-    .cuadrito {
-      left: -420px;
-      width: 70px;
-    }
-
+ 
     .contenedor2{
         display:inline;
         position: relative;
@@ -239,11 +236,7 @@ con el solapamiento de resoluciones*/
   
   /* Media query para una resolución de pantalla de 768x2014 */
   @media (min-width: 768px) and (max-width: 1024px) {
-    .cuadrito {
-      left:-260px;
-      width: 120px;
-    }
-
+    
     .contenedor2{
         display:inline;
         position: relative;
@@ -254,12 +247,7 @@ con el solapamiento de resoluciones*/
   }
   
   /* Media query para una resolución de pantalla de 1440x900 */
-  @media (min-width: 1440px) and (max-width: 900px) {
-    .cuadrito {
-      left: 792px;
-      width: 120px;
-    }
-  }
+ 
 
   @media only screen and (-webkit-min-device-pixel-ratio: 3) {
       .contenedor2{
@@ -273,18 +261,6 @@ con el solapamiento de resoluciones*/
     #otherScene{
     
         text-align: center;
-    }
-    .cuadrito{
-        display: block;
-        position:relative;
-        background-color:#000;
-        color: #fff;
-        border: 2px solid #333;
-        text-align: center;
-        padding:10px;
-        width:30%;
-        margin-left:100px;
-        
     }
     a{
         text-decoration: none;

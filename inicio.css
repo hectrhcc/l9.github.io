@@ -259,7 +259,6 @@ con el solapamiento de resoluciones*/
         
 }
 
-
 .warning{
  display:none
 }
@@ -381,3 +380,14 @@ con el solapamiento de resoluciones*/
         background-color: white;
     }
 }
+
+
+@media (min-width: 1600px) and (max-width: 1600px) and 
+       (min-height: 992px) and (max-height: 992px) {
+
+        .warning{
+            width: 46%;
+        }
+
+
+       }

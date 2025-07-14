@@ -38,6 +38,7 @@ body {
     animation-timing-function: linear;
     animation-fill-mode: forwards;
     cursor: pointer;
+    margin: 0 auto;
   }
   
   .image-holder:hover {
@@ -106,11 +107,9 @@ body {
 
   .container{
     display: flex;
-    position: absolute;
-    left: 42%;
-    top: 30%;
+    position: relative;
     margin: 0 auto;
-   
+    
   }
 
   .menu{
@@ -172,132 +171,4 @@ section{
   font-family: 'Glagolitsa';
   src: url('Glagolitsa.ttf') format('truetype');
 }
-
-
-@media (min-width:360px) and (max-width: 640px) {
-  html,body{
-    padding: 0;
-    margin: 0;
-  }
-  
-  .menu li{
-    text-decoration: none;
-    display: inline;
-    list-style-type: none;
-    position: relative;
-    top:70px;
-    left:-330px;
-    padding-right:0;
-    text-align: center;
-    font-size: 18px;
-    font-family: 'Glagolitsa';;
-  }
-
-  .container{
-    display: flex;  
-    position: absolute;
-    left:70px;
-    top: 100px;
-    
-  }
-}
-
-@media (min-width:390px) and (max-width:840px){
-  
-  .container{
-    display: flex;  
-    position: relative;
-    left: 40%;
-    bottom: 50%;
-    
-    
-  }
-
-  .menu li{
-    text-decoration: none;
-    display: inline;
-    list-style-type: none;
-    position: relative;
-    bottom:50%;
-    left:15%;
-    padding-right:0;
-    text-align: center;
-    font-size: 8px;
-    font-family: 'Glagolitsa';;
-  }
-
-  
- 
-}
-
-
-  @media (min-width: 768px) and (max-width: 1024px) {
-    .cuadrito {
-      left:-260px;
-      width: 120px;
-    }
-    .menu li{
-      text-decoration: none;
-      display: inline;
-      list-style-type: none;
-      margin-left: -160px;
-      position: relative;
-      top:50%;
-      left:150px;
-      padding-right:0;
-      text-align: center;
-      font-size: 8px;
-      font-family: 'Glagolitsa';;
-    }
-
-    .container{
-      display: flex;  
-      position: absolute;
-      left: 45%;
-      top: 20%;
-      
-    }
-  }
-
-  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
-    /* CSS */  
-  html,body{
-    padding: 0;
-    margin: 0;
-  }
-    .cuadrito {
-      left:100px;
-      border: 1px solid white;
-      width: 120px;
-    }
-    .menu li {
-      text-decoration: none;
-      display: inline;
-      list-style-type: none;
-      position: relative;
-      top:190px; 
-      right:320px;
-      justify-content: space-evenly;
-      
-      width:100%;
-      text-align: center;
-      font-size: 14px;
-      font-family: 'Glagolitsa';
-      padding-left:10px; /* Agrega un espacio de 10px a la izquierda del texto */
-     /* Agrega un espacio de 10px a la derecha del texto */
-    }
-  
-
-    .container{
-      display: flex;  
-      position: absolute;
-      float:left;
-      left:84px;
-      top: 240px;
-      
-      
-    }
-  
-
-  }
 

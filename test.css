@@ -1,18 +1,18 @@
 body {
     padding: 100px;
     background-color: black !important;
-    margin: 0 auto;
-    margin-right: 500px;
-    overflow: hidden; 
+    margin: 0 auto;; 
   }
   
 
   .parent {
     position: relative;
+    margin: 0 auto;
   }
   
   .circle {
     width: 200px;
+    
     height: 200px;
     border-radius: 50%;
     background-color: transparent;
@@ -39,6 +39,7 @@ body {
     animation-fill-mode: forwards;
     cursor: pointer;
     margin: 0 auto;
+    width: 200px;
   }
   
   .image-holder:hover {
@@ -109,8 +110,21 @@ body {
     display: flex;
     position: relative;
     margin: 0 auto;
-    
+    justify-content: center;
+    align-items: center;
   }
+
+.imagen-central {
+    width:20rem;
+    height:20rem;
+    position:relative;
+    top:1.5rem;
+    /*left: 250%;*/
+    border-radius: 50%;
+    z-index: -1;
+    margin: 0 auto;
+  
+  } 
 
   .menu{
     /*text-align: justify;*/

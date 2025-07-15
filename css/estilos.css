@@ -79,7 +79,7 @@ body{
 
 .gallery{
 	background: #000;
-	
+	margin: 0 auto;
 }
 
 .contenedor-galeria{
@@ -226,7 +226,7 @@ a:active{
 
 	}
 	.agregar-imagen{
-		width: 27rem;
+		width: 25rem;
 		
 	}
 

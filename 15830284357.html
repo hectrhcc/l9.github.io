@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Imágenes redondas en canvas</title>
+  <style>
+ 
+
+    body {
+      margin: 0;
+      overflow: hidden;
+      background-color: black;
+  
+    }
+    canvas {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      pointer-events: none;
+    }
+    .contenedor {
+  display: flex;
+  justify-content: center; /* Centrado horizontal */
+  align-items:center;     /* Centrado vertical */
+  height: 100vh;           /* Ocupa toda la altura de la pantalla */
+  z-index: 9999; /* Asegura que el contenedor esté por encima del canvas */
+}
+
+    .img{
+        margin: 0 auto;
+        justify-content: center;
+        display: block;
+        width: 30%;
+        height: 50%;
+        border-radius: 30%;
+        z-index: 9999; /* Asegura que la imagen esté por encima del canvas */
+    }
+  </style>
+  <script src="script1.js" defer></script>
+</head>
+<body>
+<div class="contenedor"><img src='x.jpg' class="img"/></div>
+<canvas id="pantalla"></canvas>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  const canvas = document.getElementById("pantalla");
+  const ctx = canvas.getContext("2d");
+
+  function ajustarCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  ajustarCanvas();
+  $(window).on('resize', ajustarCanvas);
+
+  const imagenes = ['0.jpg', '1.jpg', '2.jpg', '3.jpg', '4.jpg' ];
+  let imagenActual = 0;
+
+  $(document).on('click', function(e) {
+    const x = e.pageX;
+    const y = e.pageY;
+
+    const imagen = new Image();
+    imagen.src = imagenes[imagenActual];
+
+    imagen.onload = function () {
+      const radius = 100; // radio del círculo
+      ctx.save(); // guardar estado actual del canvas
+
+      // Crear un camino circular para recortar
+      ctx.beginPath();
+      ctx.arc(x, y, radius, 0, Math.PI * 2, true);
+      ctx.closePath();
+      ctx.clip(); // aplicar el recorte
+
+      // Dibujar la imagen recortada como círculo
+      ctx.drawImage(imagen, x - radius, y - radius, radius * 2, radius * 2);
+
+      ctx.restore(); // restaurar el canvas para próximos dibujos
+    }
+
+    imagenActual = (imagenActual + 1) % imagenes.length;
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="logo.png">
+  <title>01101100 01101111 01110011 ...</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background-color: black;
+    }
+    canvas {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      pointer-events: none;
+    }
+    .contenedor {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      z-index: 9999;
+      position: relative;
+    }
+    .img {
+      margin: 0 auto;
+      display: block;
+      width: 30%;
+      height: 50%;
+      border-radius: 30%;
+      z-index: 9999;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="contenedor">
+  <img src="x.jpg" class="img" id="imgCentral" />
+</div>
+<canvas id="pantalla"></canvas>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  const canvas = document.getElementById("pantalla");
+  const ctx = canvas.getContext("2d");
+
+  function ajustarCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  ajustarCanvas();
+  window.addEventListener('resize', ajustarCanvas);
+
+  const imagenCentral = document.getElementById("imgCentral");
+  const imagenes = ['0.jpg', '1.jpg', '2.jpg', '3.jpg'];
+
+  let imagenCentroActual = 0;
+  let imagenCanvasActual = 2; // partimos desfasado para que sean distintas
+
+  document.body.addEventListener('click', function(e) {
+    const x = e.pageX;
+    const y = e.pageY;
+
+    // Cambiar imagen del centro (desincronizada)
+    imagenCentral.src = imagenes[imagenCentroActual];
+    imagenCentroActual = (imagenCentroActual + 1) % imagenes.length;
+
+    // Imagen distinta para el canvas
+    const imagen = new Image();
+    imagen.src = imagenes[imagenCanvasActual];
+
+    imagen.onload = function () {
+      const radius = 100;
+      ctx.save();
+      ctx.beginPath();
+      ctx.arc(x, y, radius, 0, Math.PI * 2);
+      ctx.closePath();
+      ctx.clip();
+      ctx.drawImage(imagen, x - radius, y - radius, radius * 2, radius * 2);
+      ctx.restore();
+    };
+
+    imagenCanvasActual = (imagenCanvasActual + 1) % imagenes.length;
+  });
+</script>
+</body>
+</html>

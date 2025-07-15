@@ -210,32 +210,12 @@ a:active{
 		width: 45%;
 
 	}
-	.footer-content{
-		justify-content: center;
-	}
-	.social-media{
-		width: 80%;
-		justify-content: space-evenly;
-	}
-	.social-media-icon{
-		margin-left: 0;
-	}
-
-	.social-media i{
-		margin-left: 0;
-
-	}
-	.contact-us{
-		text-align: center;
-		width: 80%;
-		margin-bottom:40px ;
-	}
 
 	h4, a,.correo{
 		display: none;
 	}
 	section{
-		width:80%;
+		width:100%;
 	}
 
 }
@@ -246,7 +226,8 @@ a:active{
 
 	}
 	.agregar-imagen{
-		width: 95px;
+		width: 28rem;
+		
 	}
 
 	.subtitulo{

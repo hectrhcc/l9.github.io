@@ -190,6 +190,12 @@ a:active{
   src: url('../Glagolitsa.ttf') format('truetype');
 }
 
+.contenedor-videos{
+	border:1px solid red;
+	position: relative;
+	top:12.5rem;
+}
+
 @media screen and (max-width: 800px){
 	.titulo{
 		font-size: 40px;

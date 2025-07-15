@@ -191,9 +191,8 @@ a:active{
 }
 
 .contenedor-videos{
-	border:1px solid red;
-	position: relative;
-	top:12.5rem;
+	margin: 2.5rem auto;
+
 }
 
 @media screen and (max-width: 800px){

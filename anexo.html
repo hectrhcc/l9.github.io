@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anexo L9T - Los Nueve Talentos</title>
+    <link rel="stylesheet" href="css/estilos.css"> <link rel="icon" type="image/png" href="logo.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos CSS incorporados para el acordeón y la página */
+        body {
+            font-family: 'Open Sans', sans-serif; /* Usando la fuente que ya importaste */
+            margin: 0;
+            padding: 20px;
+            background-color: #000; /* Fondo oscuro */
+            color: #e0e0e0; /* Texto claro */
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Alinea arriba para que el contenido fluya */
+            min-height: 100vh; /* Para que ocupe al menos toda la altura de la vista */
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%; /* Ocupa todo el ancho disponible hasta el max-width */
+            margin: 20px 0; /* Margen superior e inferior para separación */
+            background-color: #111; /* Contenedor más claro */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            box-sizing: border-box; /* Incluye padding en el width */
+        }
+
+        h1 {
+            color: #e51a4c; /* Título vibrante */
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+
+        .accordion-item {
+            margin-bottom: 10px;
+            border: 1px solid #fff;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            background-color: #000;
+            color: #fff;
+            padding: 15px 20px;
+            cursor: pointer;
+            font-size: 1.2em;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .accordion-header:hover {
+            background-color: #222;
+        }
+
+        .accordion-header::after {
+            content: '▼'; /* Flecha hacia abajo por defecto */
+            font-size: 0.8em;
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-header.active::after {
+            content: '▲'; /* Flecha hacia arriba cuando está activo */
+            transform: rotate(180deg);
+        }
+
+        .accordion-content {
+            padding: 0 20px; /* Padding vertical inicial 0 */
+            background-color: #0c0c11; /* Fondo oscuro para el contenido */
+            max-height: 0; /* Esencial para la animación de colapsar */
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s ease-out; /* Transición suave */
+        }
+
+        .accordion-content p, .accordion-content ul {
+            margin: 15px 0; /* Espaciado dentro del contenido */
+        }
+
+        .accordion-content ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding-bottom: 5px; /* Pequeño padding al final de la lista */
+        }
+
+        .accordion-content li {
+            margin-bottom: 8px;
+        }
+
+        .accordion-content kbd {
+            background-color: #000;
+            border: 1px solid #000;
+            border-bottom-color: #333;
+            border-radius: 3px;
+            padding: 2px 5px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9em;
+            color: #fff;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.1);
+        }
+
+        .accordion-content pre {
+            background-color: #0d0d1a;
+            color: #d4d4d4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-size: 0.85em; /* Ligeramente más pequeño para el código */
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .download-button {
+            display: block;
+            width: fit-content;
+            margin: 20px auto;
+            padding: 15px 30px;
+            background-color: #000; /* Color de botón azul */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .download-button:hover {
+            background-color: #e51a4c;
+            color:black;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #888;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Anexo L9T - Tu Juego de Pygame</h1>
+
+    <div class="accordion-item">
+        <div class="accordion-header">
+            Instrucciones de Juego
+        </div>
+        <div class="accordion-content">
+            <p>¡Bienvenido a **Anexo L9T**! ¡Es muy fácil comenzar a jugar!</p>
+            <ul>
+                <li><strong>Saltar:</strong> Presiona la tecla <kbd>Barra Espaciadora</kbd> para que tu personaje salte de plataforma en plataforma.</li>
+                <li><strong>Moverse:</strong> Utiliza las <kbd>Flechas Izquierda</kbd> y <kbd>Derecha</kbd> de tu teclado para mover a tu personaje horizontalmente.</li>
+                <li><strong>Lanzar Espada:</strong> Presiona la tecla <kbd>Enter</kbd> para lanzar una espada y atacar al misterioso enemigo. ¡Recuerda que tus espadas son limitadas, así que recógelas estratégicamente</li>
+                <li><strong>Objetivo:</strong> Sube tan alto como puedas, superando al enemigo para conseguir la puntuación más alta.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">
+            Pseudocódigo del Juego
+        </div>
+        <div class="accordion-content">
+            <p>El siguiente pseudocódigo describe la lógica principal y las interacciones clave de "Anexo L9T".</p>
+            <pre><code>
+INICIO PROGRAMA
+
+  // Inicialización
+  Configurar ventana del juego (ancho, alto, título)
+  Inicializar Pygame y su mezclador de audio
+  Cargar todos los recursos (imágenes, sonidos, música) usando la función `resource_path` para compatibilidad con ejecutables
+  Reproducir música de fondo en bucle
+
+  // Clases del Juego
+  CLASE Jugador:
+    Propiedades: posición (x, y), velocidad en Y, estado en el suelo, espadas disponibles
+    Métodos:
+      Actualizar():
+        Detectar pulsaciones de teclas (izquierda, derecha para movimiento horizontal)
+        Si Barra Espaciadora es presionada Y está en el suelo:
+          Aplicar velocidad de salto
+          Reproducir sonido de salto
+        Aplicar gravedad a velocidad en Y
+        Mover jugador según velocidad en Y
+        Verificar colisión con plataformas:
+          Si colisiona por arriba con una plataforma:
+            Establecer posición en la parte superior de la plataforma
+            Resetear velocidad en Y
+            Marcar como "en el suelo"
+
+  CLASE Enemigo:
+    Propiedades: posición (x, y), estado de vida (vivo/muerto)
+    Métodos:
+      Actualizar():
+        Si está vivo:
+          Calcular dirección hacia el jugador
+          Moverse hacia el jugador con un ligero movimiento sinusoidal
+          
+  CLASE Plataforma:
+    Propiedades: posición (x, y), dimensiones
+    Métodos: (Solo constructor)
+
+  CLASE Espada:
+    Propiedades: posición (x, y), tipo (coleccionable/lanzada), velocidad (solo para lanzadas)
+    Métodos:
+      Actualizar():
+        Si es lanzada:
+          Mover espada horizontalmente
+          Si sale de la pantalla:
+            Eliminar espada
+
+  // Clase Principal del Juego
+  CLASE Juego:
+    Propiedades: pantalla, jugador, enemigo, offset de cámara, grupos de sprites (plataformas, espadas coleccionables, espadas lanzadas), contador de plataformas, puntuación, tiempo de inicio, estado del juego (running/game_over), control para lanzamiento de espada (`can_fire_sword`)
+
+    Métodos:
+      Constructor():
+        Inicializar objetos Jugador, Enemigo
+        Generar plataformas iniciales
+        Establecer estado de juego a "running"
+        Inicializar `can_fire_sword` a Verdadero
+
+      ResetearJuego():
+        Reiniciar todas las propiedades a su estado inicial
+        Generar nuevas plataformas
+        Reiniciar música de fondo
+
+      GenerarPlataformasIniciales():
+        Bucle para añadir un número inicial de plataformas
+
+      AñadirPlataforma():
+        Crear nueva plataforma en una posición calculada
+        Si el contador de plataformas cumple cierta condición:
+          Añadir una espada coleccionable en la plataforma
+
+      ActualizarPlataformasSiEsNecesario():
+        Si el jugador sube lo suficiente:
+          Añadir más plataformas
+        Eliminar plataformas y espadas coleccionables que estén muy por debajo de la vista de la cámara
+
+      DibujarFondoEnMosaico():
+        Dibujar el fondo de manera repetitiva para crear un efecto de desplazamiento infinito
+
+      MostrarTiempo():
+        Calcular y mostrar el tiempo transcurrido
+
+      MostrarPuntuacionYEspadas():
+        Mostrar puntuación actual y número de espadas disponibles
+
+      MostrarGameOver():
+        Dibujar pantalla de Game Over con mensaje de reinicio
+        
+      Ejecutar():
+        Bucle principal del juego:
+          Mientras el juego esté corriendo:
+            Manejar Eventos:
+              Si se cierra la ventana:
+                Salir del juego
+              Si se presiona una tecla:
+                Si el juego está en Game Over:
+                  Resetear Juego
+                Si el juego está corriendo Y la tecla es ENTER:
+                  Si se puede lanzar espada Y hay espadas disponibles:
+                    Crear nueva espada lanzada
+                    Añadirla al grupo `fired_swords`
+                    Decrementar espadas disponibles del jugador
+                    Reproducir sonido de espada
+                    Establecer `can_fire_sword` a Falso
+              Si se suelta una tecla:
+                Si la tecla es ENTER:
+                  Establecer `can_fire_sword` a Verdadero
+
+            Si el estado del juego es "running":
+              Actualizar Jugador (movimiento, gravedad, colisiones con plataformas)
+              Actualizar Enemigo (movimiento hacia el jugador)
+              Actualizar offset de la cámara (seguir al jugador)
+              Actualizar espadas lanzadas (movimiento, eliminación si salen de pantalla)
+              Actualizar plataformas si es necesario (generar nuevas, eliminar viejas)
+              Detectar colisiones entre Jugador y espadas coleccionables:
+                Si colisiona:
+                  Incrementar puntuación
+                  Incrementar espadas disponibles del jugador
+                  Eliminar espada coleccionable
+              Detectar colisiones entre Enemigo y espadas lanzadas:
+                Si colisiona:
+                  Eliminar espada lanzada (y potencialmente manejar la "vida" del enemigo si se implementa)
+
+              Si el Enemigo está vivo Y Jugador colisiona con Enemigo:
+                Establecer estado del juego a "game_over"
+                Detener música de fondo
+                Reproducir sonido de Game Over
+
+              Dibujar:
+                Dibujar fondo
+                Dibujar plataformas
+                Dibujar espadas coleccionables
+                Dibujar espadas lanzadas
+                Dibujar jugador
+                Si Enemigo está vivo:
+                  Dibujar enemigo
+                Mostrar tiempo
+                Mostrar puntuación y espadas
+
+            Si el estado del juego es "game_over":
+              Mostrar pantalla de Game Over
+
+            Actualizar pantalla de Pygame
+            Controlar FPS
+
+  Si el script se ejecuta directamente:
+    Crear instancia de Juego
+    Ejecutar el juego
+
+FIN PROGRAMA
+            </code></pre>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">
+            Código Fuente del Juego (anexo-l9t.py)
+        </div>
+        <div class="accordion-content">
+            <p>Aquí puedes ver el código fuente completo del juego "Anexo Los Nueve Talentos" en Python con Pygame:</p>
+            <pre><code class="language-python">
+import pygame
+import random
+import sys
+import os # Necesitas 'os' para manejar rutas de archivos
+import math
+import time
+
+pygame.init()
+pygame.mixer.init() # Inicializa el mezclador de audio de Pygame
+
+# <<<<<<<<<<<<<<< INICIO DE LA FUNCIÓN CLAVE PARA PYINSTALLER >>>>>>>>>>>>>>>
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    try:
+        # PyInstaller crea una carpeta temporal y guarda la ruta en _MEIPASS
+        base_path = sys._MEIPASS
+    except Exception:
+        # Si no se ejecuta como un .exe de PyInstaller, usa la ruta actual del script
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
+# <<<<<<<<<<<<<<< FIN DE LA FUNCIÓN CLAVE PARA PYINSTALLER >>>>>>>>>>>>>>>
+
+
+# Pantalla
+WIDTH, HEIGHT = 800, 600
+screen = pygame.display.set_mode((WIDTH, HEIGHT))
+pygame.display.set_caption("꒷꒦︶꒷꒦︶ ๋ ࣭꒦  ꒷꒦︶꒷꒦︶ ๋ ࣭꒦  ")
+
+# Clock
+clock = pygame.time.Clock()
+FPS = 60
+
+# Colores (se mantienen, aunque no se usen los de depuración)
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+RED = (255, 0, 0)
+BLUE = (0, 0, 255)
+GREEN = (0, 255, 0)
+YELLOW = (255, 255, 0)
+
+# Tamaños
+PLAYER_SIZE = 50
+ENEMY_SIZE = 400
+STAIR_WIDTH = 100
+STAIR_HEIGHT = 20
+SWORD_SIZE = 30 # Tamaño para la espada
+
+# Velocidades
+PLAYER_SPEED = 5
+ENEMY_SPEED = 3
+JUMP_HEIGHT = 12
+GRAVITY = 0.5
+SWORD_VELOCITY = 15
+
+# Cargar imágenes usando resource_path
+sprite_folder = resource_path("sprites") 
+PLAYER_IMG = pygame.image.load(os.path.join(sprite_folder, "circulo.png")).convert_alpha()
+ENEMY_IMG = pygame.image.load(os.path.join(sprite_folder, "cabeza.png")).convert_alpha()
+BACKGROUND_IMG = pygame.image.load(os.path.join(sprite_folder, "fondo.png")).convert()
+
+# Cargar la imagen base para espadas coleccionables (espada.png)
+BASE_SWORD_IMG = pygame.image.load(os.path.join(sprite_folder, "espada.png")).convert_alpha()
+BASE_SWORD_IMG = pygame.transform.scale(BASE_SWORD_IMG, (SWORD_SIZE, SWORD_SIZE))
+
+# Cargar la imagen para espadas lanzadas (espada2.png), ya rotada
+SWORD_FIRED_IMG = pygame.image.load(os.path.join(sprite_folder, "espada2.png")).convert_alpha()
+SWORD_FIRED_IMG = pygame.transform.scale(SWORD_FIRED_IMG, (SWORD_SIZE, SWORD_SIZE))
+
+# Escalar las otras imágenes
+PLAYER_IMG = pygame.transform.scale(PLAYER_IMG, (PLAYER_SIZE, PLAYER_SIZE))
+ENEMY_IMG = pygame.transform.scale(ENEMY_IMG, (ENEMY_SIZE, ENEMY_SIZE))
+BACKGROUND_IMG = pygame.transform.scale(BACKGROUND_IMG, (WIDTH, HEIGHT))
+
+# Cargar audios usando resource_path
+audio_folder = resource_path("audio") 
+JUMP_SOUND = pygame.mixer.Sound(os.path.join(audio_folder, "jumping.mp3"))
+SWORD_SOUND = pygame.mixer.Sound(os.path.join(audio_folder, "sword-sound.mp3"))
+GAME_OVER_SOUND = pygame.mixer.Sound(os.path.join(audio_folder, "game-over.mp3"))
+
+BACKGROUND_MUSIC = os.path.join(audio_folder, "HeridAcuática.wav")
+
+# Reproducir música de fondo en bucle
+pygame.mixer.music.load(BACKGROUND_MUSIC)
+pygame.mixer.music.play(-1) # El -1 hace que se repita infinitamente
+
+
+# Fuentes para el texto
+font = pygame.font.Font(None, 36)
+game_over_font = pygame.font.Font(None, 100)
+restart_font = pygame.font.Font(None, 40)
+
+class Player(pygame.sprite.Sprite):
+    def __init__(self, x, y):
+        super().__init__()
+        self.image = PLAYER_IMG
+        self.rect = self.image.get_rect(topleft=(x, y))
+        self.vel_y = 0
+        self.on_ground = False
+        self.swords_available = 0
+
+    def update(self, keys_pressed, stairs):
+        dx = 0
+
+        if keys_pressed[pygame.K_LEFT]:
+            dx = -PLAYER_SPEED
+        if keys_pressed[pygame.K_RIGHT]:
+            dx = PLAYER_SPEED
+
+        if keys_pressed[pygame.K_SPACE] and self.on_ground:
+            self.vel_y = -JUMP_HEIGHT
+            self.on_ground = False
+            JUMP_SOUND.play()
+
+        self.vel_y += GRAVITY
+        self.rect.y += self.vel_y
+        self.rect.x += dx
+
+        self.on_ground = False
+        for stair in stairs:
+            if self.rect.colliderect(stair.rect) and self.vel_y >= 0:
+                self.rect.bottom = stair.rect.top
+                self.vel_y = 0
+                self.on_ground = True
+
+class Enemy(pygame.sprite.Sprite):
+    def __init__(self, x, y):
+        super().__init__()
+        self.image = ENEMY_IMG
+        self.rect = self.image.get_rect(topleft=(x, y))
+        self.alive = True
+
+    def update(self, player_rect):
+        if self.alive:
+            target_x = player_rect.x - 200
+            target_y = player_rect.y - 150
+
+            dx = target_x - self.rect.x
+            dy = target_y - self.rect.y
+
+            if dx != 0:
+                self.rect.x += int(ENEMY_SPEED * dx / abs(dx))
+            if dy != 0:
+                self.rect.y += int(ENEMY_SPEED * dy / abs(dy))
+
+            self.rect.y += int(5 * math.sin(pygame.time.get_ticks() / 8))
+
+class Stair(pygame.sprite.Sprite):
+    def __init__(self, x, y):
+        super().__init__()
+        self.image = pygame.Surface((STAIR_WIDTH, STAIR_HEIGHT))
+        self.image.fill((200, 200, 200))
+        self.rect = self.image.get_rect(topleft=(x, y))
+
+class Sword(pygame.sprite.Sprite):
+    def __init__(self, x, y, type="collectible"):
+        super().__init__()
+        self.type = type
+        
+        if self.type == "fired":
+            self.image = SWORD_FIRED_IMG
+            self.vel_x = -SWORD_VELOCITY
+            self.vel_y = 0
+        else: # "collectible"
+            self.image = BASE_SWORD_IMG
+            self.vel_x = 0
+            self.vel_y = 0 
+        
+        self.rect = self.image.get_rect(topleft=(x, y))
+
+    def update(self, camera_offset_x, camera_offset_y):
+        if self.type == "fired":
+            self.rect.x += self.vel_x
+            self.rect.y += self.vel_y
+            
+            screen_x = self.rect.x - camera_offset_x
+            screen_y = self.rect.y - camera_offset_y
+
+            if screen_x + self.rect.width < -50 or screen_x > WIDTH + 50 or \
+               screen_y + self.rect.height < -50 or screen_y > HEIGHT + 50:
+                self.kill()
+
+class Game:
+    def __init__(self):
+        self.screen = screen
+        self.player = Player(100, HEIGHT - 100)
+        self.enemy = Enemy(0, -1000)
+        self.camera_offset_x = 0
+        self.camera_offset_y = 0
+        self.stairs = pygame.sprite.Group()
+        self.collectible_swords = pygame.sprite.Group()
+        self.fired_swords = pygame.sprite.Group()
+        self.stair_count = 0
+        self.score = 0
+        self.start_time = time.time()
+        self.game_state = "running"
+        
+        self.last_stair_x = 100
+        self.last_stair_y = HEIGHT - 60
+        
+        self.generate_initial_stairs()
+        self.can_fire_sword = True # NUEVA VARIABLE DE CONTROL
+
+    def reset_game(self):
+        self.player = Player(100, HEIGHT - 100)
+        self.enemy = Enemy(0, -1000)
+        self.camera_offset_x = 0
+        self.camera_offset_y = 0
+        self.stairs.empty() 
+        self.collectible_swords.empty()
+        self.fired_swords.empty()
+        
+        self.last_stair_x = 100
+        self.last_stair_y = HEIGHT - 60
+        
+        self.stair_count = 0
+        self.score = 0
+        self.start_time = time.time()
+        self.generate_initial_stairs()
+        self.game_state = "running"
+        self.enemy.alive = True
+        pygame.mixer.music.play(-1) # Reinicia la música de fondo en bucle
+
+    def generate_initial_stairs(self):
+        for _ in range(100):
+            self.add_stair()
+
+    def add_stair(self):
+        stair = Stair(self.last_stair_x, self.last_stair_y)
+        self.stairs.add(stair)
+        self.stair_count += 1
+        
+        if self.stair_count % 11 == 0 or self.stair_count % 15 == 0:
+            sword_x = self.last_stair_x + random.randint(0, STAIR_WIDTH - SWORD_SIZE)
+            sword_y = self.last_stair_y - STAIR_HEIGHT - SWORD_SIZE - random.randint(0, 50)
+            sword = Sword(sword_x, sword_y, type="collectible")
+            self.collectible_swords.add(sword)
+
+        self.last_stair_x += STAIR_WIDTH // 2
+        self.last_stair_y -= STAIR_HEIGHT * 2
+
+    def update_stairs_if_needed(self):
+        if self.player.rect.y < self.last_stair_y + 200:
+            for _ in range(10):
+                self.add_stair()
+
+        for stair in list(self.stairs):
+            if stair.rect.top - self.camera_offset_y > HEIGHT + 100:
+                self.stairs.remove(stair)
+        
+        for sword in list(self.collectible_swords):
+            if sword.rect.top - self.camera_offset_y > HEIGHT + 100:
+                self.collectible_swords.remove(sword)
+        
+
+    def draw_tiled_background(self):
+        bg_width = BACKGROUND_IMG.get_width()
+        bg_height = BACKGROUND_IMG.get_height()
+
+        offset_x = int(-self.camera_offset_x * 0.2) % bg_width
+        offset_y = int(-self.camera_offset_y * 0.2) % bg_height
+
+        for x in range(-bg_width, WIDTH + bg_width, bg_width):
+            for y in range(-bg_height, HEIGHT + bg_height, bg_height):
+                self.screen.blit(BACKGROUND_IMG, (x + offset_x, y + offset_y))
+
+    def display_time(self):
+        elapsed_time = time.time() - self.start_time
+        hours = int(elapsed_time // 3600)
+        minutes = int((elapsed_time % 3600) // 60)
+        seconds = int(elapsed_time % 60)
+        time_text = f"Tiempo: {hours:02}:{minutes:02}:{seconds:02}"
+        text_surface = font.render(time_text, True, WHITE)
+        self.screen.blit(text_surface, (10, 10))
+
+    def display_score_and_swords(self):
+        score_text = f"Puntuación: {self.score}"
+        swords_text = f"Espadas: {self.player.swords_available}"
+        
+        score_surface = font.render(score_text, True, WHITE)
+        swords_surface = font.render(swords_text, True, WHITE)
+
+        score_rect = score_surface.get_rect(topright=(WIDTH - 10, 10))
+        swords_rect = swords_surface.get_rect(topright=(WIDTH - 10, 10 + score_surface.get_height() + 5))
+        
+        self.screen.blit(score_surface, score_rect)
+        self.screen.blit(swords_surface, swords_rect)
+
+    def display_game_over(self):
+        overlay = pygame.Surface((WIDTH, HEIGHT), pygame.SRCALPHA)
+        overlay.fill((0, 0, 0, 150))
+        self.screen.blit(overlay, (0, 0))
+
+        game_over_text = "GAME OVER"
+        text_surface = game_over_font.render(game_over_text, True, RED)
+        border_color = BLACK
+        border_thickness = 3
+        for x_offset in range(-border_thickness, border_thickness + 1):
+            for y_offset in range(-border_thickness, border_thickness + 1):
+                if x_offset != 0 or y_offset != 0:
+                    border_surface = game_over_font.render(game_over_text, True, border_color)
+                    border_rect = border_surface.get_rect(center=(WIDTH // 2 + x_offset, HEIGHT // 2 + y_offset - 50))
+                    self.screen.blit(border_surface, border_rect)
+        
+        text_rect = text_surface.get_rect(center=(WIDTH // 2, HEIGHT // 2 - 50))
+        self.screen.blit(text_surface, text_rect)
+
+        restart_text = "Presiona una tecla para reiniciar"
+        restart_surface = restart_font.render(restart_text, True, WHITE)
+        restart_rect = restart_surface.get_rect(center=(WIDTH // 2, HEIGHT // 2 + 50))
+        self.screen.blit(restart_surface, restart_rect)
+
+
+    def run(self):
+        running = True
+        while running:
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    running = False
+                if event.type == pygame.KEYDOWN:
+                    if self.game_state == "game_over":
+                        self.reset_game()
+                    elif self.game_state == "running" and event.key == pygame.K_RETURN:
+                        if self.can_fire_sword and self.player.swords_available > 0:
+                            sword_start_x = self.player.rect.left - SWORD_SIZE // 2 
+                            sword_start_y = self.player.rect.centery
+                            
+                            sword = Sword(sword_start_x, sword_start_y, type="fired")
+                            
+                            self.fired_swords.add(sword)
+                            self.player.swords_available -= 1
+                            SWORD_SOUND.play()
+                            self.can_fire_sword = False # Deshabilita el lanzamiento hasta que la tecla se suelte
+                # NUEVO EVENTO: KEYUP para restablecer el lanzamiento
+                if event.type == pygame.KEYUP:
+                    if event.key == pygame.K_RETURN:
+                        self.can_fire_sword = True # Habilita el lanzamiento de nuevo cuando la tecla se suelta
+
+
+            if self.game_state == "running":
+                keys = pygame.key.get_pressed()
+                self.player.update(keys, self.stairs)
+                self.enemy.update(self.player.rect)
+                
+                self.camera_offset_x = int(self.player.rect.x - WIDTH // 2)
+                self.camera_offset_y = int(self.player.rect.y - HEIGHT // 2)
+
+                for sword in self.fired_swords:
+                    sword.update(self.camera_offset_x, self.camera_offset_y)
+
+                self.update_stairs_if_needed()
+
+                collided_collectible_swords = pygame.sprite.spritecollide(self.player, self.collectible_swords, True)
+                for sword in collided_collectible_swords:
+                    self.score += 10
+                    self.player.swords_available += 1
+
+                pygame.sprite.spritecollide(self.enemy, self.fired_swords, True) 
+
+                if self.enemy.alive and pygame.sprite.collide_rect(self.player, self.enemy):
+                    self.game_state = "game_over"
+                    pygame.mixer.music.stop() # Detiene la música de fondo
+                    GAME_OVER_SOUND.play() # Reproduce el sonido de Game Over
+
+
+                self.draw_tiled_background()
+
+                for stair in self.stairs:
+                    x_screen = int(stair.rect.x - self.camera_offset_x)
+                    y_screen = int(stair.rect.y - self.camera_offset_y)
+                    self.screen.blit(stair.image, (x_screen, y_screen))
+                
+                for sword in self.collectible_swords:
+                    x_screen = int(sword.rect.x - self.camera_offset_x)
+                    y_screen = int(sword.rect.y - self.camera_offset_y)
+                    self.screen.blit(sword.image, (x_screen, y_screen))
+
+                for sword in self.fired_swords:
+                    x_screen = int(sword.rect.x - self.camera_offset_x)
+                    y_screen = int(sword.rect.y - self.camera_offset_y)
+                    self.screen.blit(sword.image, (x_screen, y_screen))
+
+                px_screen = int(self.player.rect.x - self.camera_offset_x)
+                py_screen = int(self.player.rect.y - self.camera_offset_y)
+                self.screen.blit(self.player.image, (px_screen, py_screen))
+
+                if self.enemy.alive:
+                    ex_screen = int(self.enemy.rect.x - self.camera_offset_x)
+                    ey_screen = int(self.enemy.rect.y - self.camera_offset_y)
+                    self.screen.blit(self.enemy.image, (ex_screen, ey_screen))
+
+
+                self.display_time()
+                self.display_score_and_swords()
+
+            elif self.game_state == "game_over":
+                self.display_game_over()
+
+            pygame.display.update()
+            clock.tick(FPS)
+
+        pygame.quit()
+        sys.exit()
+
+if __name__ == "__main__":
+    game = Game()
+    game.run()
+            </code></pre>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">
+            Descargar el Juego
+        </div>
+        <div class="accordion-content">
+            <p>¡Listo para jugar! Descarga la versión ejecutable del juego para Windows aquí:</p>
+            <a href="anexo-l9t.exe" download class="download-button">
+                <i class='bx bxs-download'></i> Descargar Anexo L9T.exe
+            </a>
+            <p><strong>Nota:</strong> Es posible que tu navegador o antivirus muestre una advertencia al descargar archivos .exe, ya que son ejecutables. Puedes ignorarla, el archivo es seguro.</p>
+        </div>
+    </div>
+
+</div>
+
+
+
+<script>
+    // JavaScript para la funcionalidad del acordeón
+    document.addEventListener('DOMContentLoaded', function() {
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', function() {
+                const content = this.nextElementSibling; // El contenido es el siguiente hermano
+                const isActive = this.classList.contains('active');
+
+                // Cierra cualquier otro acordeón abierto
+                document.querySelectorAll('.accordion-header.active').forEach(openHeader => {
+                    if (openHeader !== this) {
+                        openHeader.classList.remove('active');
+                        openHeader.nextElementSibling.style.maxHeight = null;
+                        openHeader.nextElementSibling.style.paddingTop = '0';
+                        openHeader.nextElementSibling.style.paddingBottom = '0';
+                    }
+                });
+
+                // Abre o cierra el acordeón actual
+                if (isActive) {
+                    this.classList.remove('active');
+                    content.style.maxHeight = null; // Cierra
+                    content.style.paddingTop = '0';
+                    content.style.paddingBottom = '0';
+                } else {
+                    this.classList.add('active');
+                    content.style.maxHeight = content.scrollHeight + 'px'; // Abre (scrollHeight es la altura real del contenido)
+                    content.style.paddingTop = '20px'; // Añade padding cuando se abre
+                    content.style.paddingBottom = '20px'; // Añade padding cuando se abre
+                }
+            });
+        });
+
+        // Opcional: Abre el primer acordeón por defecto al cargar la página
+        // if (accordionHeaders.length > 0) {
+        //     accordionHeaders[0].click();
+        // }
+    });
+</script>
+
+</body>
+</html>

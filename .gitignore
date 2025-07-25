@@ -1,0 +1,6 @@
+# Ignorar archivos ejecutables de Pygame
+anexo-l9t.exe
+anexo-l9t-v1.0.exe
+# Carpeta de salida de PyInstaller
+dist/
+build/
